@@ -2,11 +2,11 @@
 
 case $AutoDLRegion in
   #内蒙 A
-  neimeng-A)
+  neimeng-A | neimeng-C | neimeng-D)
     proxy=http://192.168.1.174:12798
     ;;
   #北京 A
-  beijing-B)
+  beijing-A | beijing-B | beijing-D | beijing-E)
     proxy=http://100.72.64.19:12798
     ;;
   #芜湖区
