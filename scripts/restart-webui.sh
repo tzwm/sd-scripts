@@ -1,8 +1,12 @@
 #! /bin/bash
 
-pgrep -f 'webui.*.sh' | head -n 1 | xargs kill
+mkdir -p /root/autodl-tmp/webui_outputs
 
 echo "重启中，需要等待几秒……"
+
+
+pgrep -f 'launch.py' | head -n 1 | xargs kill
+
 sleep 4
 
-/root/stable-diffusion-webui/webui.sh
+cd /root/stable-diffusion-webui/ && ./webui.sh -f
