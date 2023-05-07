@@ -3,7 +3,7 @@
 model_dir="/root/autodl-tmp/models"
 
 if [ -d "$model_dir" ]; then
-  echo "模型目录已存在，退出脚本不重复下载"
+  echo "模型目录已存在，不重复下载"
   exit 0
 fi
 
@@ -15,6 +15,13 @@ cg down StableDiffusion-VAE/anything-v4.0.vae.pt -t $model_dir
 cg down StableDiffusion-LoRAs/makimaChainsawMan_offset.safetensors -t $model_dir
 cg down StableDiffusion-Embeddings/easy_negative.safetensors -t $model_dir
 cg down ControlNet-v1-1 -t $model_dir
+
+cd $model_dir
+mv StableDiffusion-checkpoints ckpt
+mv StableDiffusion-VAE vae
+mv StableDiffusion-LoRAs lora
+mv StableDiffusion-Embeddings embeddings
+mv ControlNet-v1-1 controlnet
 
 echo "都下载好了，可以去启动了"
 
