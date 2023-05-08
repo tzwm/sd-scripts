@@ -37,18 +37,17 @@ git config --global http.proxy $proxy
 if [ "$1" = "global" ]; then
   echo '开启全局加速'
 
-  server=$(echo $proxy | sed 's/http:\/\/\([^:]*\):.*/\1/')
-  port=$(echo $proxy | sed 's/.*:\([0-9]*\)$/\1/')
-
-  cd /root/clash
-  sed -i "s/server_address/$server/g" config.yaml
-  sed -i "s/server_port/$port/g" config.yaml
-
   if pgrep clash > /dev/null
   then
     echo "clash is already running"
   else
     echo "starting clash"
+    cd /root/clash
+    cp /root/tzwm_sd_webui_scripts/configs/clash_config.yaml ./config.yaml
+    server=$(echo $proxy | sed 's/http:\/\/\([^:]*\):.*/\1/')
+    port=$(echo $proxy | sed 's/.*:\([0-9]*\)$/\1/')
+    sed -i "s/server_address/$server/g" config.yaml
+    sed -i "s/server_port/$port/g" config.yaml
     nohup ./clash -f config.yaml &
   fi
 
