@@ -33,3 +33,9 @@ esac
 
 echo 'git 科学加速启动'
 git config --global http.proxy $proxy
+
+if [ "$1" = "global" ]; then
+  echo '开启全局加速'
+  export http_proxy=$proxy
+  export https_proxy=$proxy
+fi
