@@ -38,4 +38,5 @@ if [ "$1" = "global" ]; then
   echo '开启全局加速'
   export http_proxy=$proxy
   export https_proxy=$proxy
+  export no_proxy=localhost,127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16
 fi
