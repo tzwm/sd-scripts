@@ -1,0 +1,11 @@
+mixed-port: 7890
+
+proxies:
+  - name: autodl
+    type: http
+    server: server_address
+    port: server_port
+
+rules:
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - MATCH,autodl
