@@ -17,8 +17,11 @@ case $AutoDLRegion in
   west-A)
     proxy=http://192.168.1.174:12798
     ;;
+  #佛山区
+  foshan-A)
+    proxy=http://192.168.126.12:12798
   #毕业
-  stu-A)
+  stu-A | east-A)
     proxy=http://10.0.0.7:12798
     ;;
   #宿迁企业区
@@ -27,6 +30,7 @@ case $AutoDLRegion in
     ;;
   *)
     echo "不知道你是哪个区的机器"
+    echo "$AutoDLRegion 请把这行发群里，我补上"
     exit 1
     ;;
 esac
