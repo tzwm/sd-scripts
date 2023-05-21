@@ -20,6 +20,7 @@ case $AutoDLRegion in
   #佛山区
   foshan-A)
     proxy=http://192.168.126.12:12798
+    ;;
   #毕业
   stu-A | east-A)
     proxy=http://10.0.0.7:12798
@@ -47,11 +48,14 @@ if [ "$1" = "global" ]; then
   else
     echo "starting clash"
     cd /root/clash
-    cp /root/tzwm_sd_webui_scripts/configs/clash_config.yaml ./config.yaml
-    server=$(echo $proxy | sed 's/http:\/\/\([^:]*\):.*/\1/')
-    port=$(echo $proxy | sed 's/.*:\([0-9]*\)$/\1/')
-    sed -i "s/server_address/$server/g" config.yaml
-    sed -i "s/server_port/$port/g" config.yaml
+
+    if ! [ -e ./config.yaml]; then
+      cp /root/tzwm_sd_webui_scripts/configs/clash_config.yaml ./config.yaml
+      server=$(echo $proxy | sed 's/http:\/\/\([^:]*\):.*/\1/')
+      port=$(echo $proxy | sed 's/.*:\([0-9]*\)$/\1/')
+      sed -i "s/server_address/$server/g" config.yaml
+      sed -i "s/server_port/$port/g" config.yaml
+    fi
     nohup ./clash -f config.yaml &
   fi
 
