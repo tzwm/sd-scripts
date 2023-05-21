@@ -49,7 +49,7 @@ if [ "$1" = "global" ]; then
     echo "starting clash"
     cd /root/clash
 
-    if ! [ -e ./config.yaml]; then
+    if ! [ -e "config.yaml" ]; then
       cp /root/tzwm_sd_webui_scripts/configs/clash_config.yaml ./config.yaml
       server=$(echo $proxy | sed 's/http:\/\/\([^:]*\):.*/\1/')
       port=$(echo $proxy | sed 's/.*:\([0-9]*\)$/\1/')
