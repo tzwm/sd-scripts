@@ -1,6 +1,7 @@
 #! /bin/bash
 
 mkdir -p /root/autodl-tmp/webui_outputs
+mkdir -p /root/autodl-tmp/dreambooth
 
 echo "重启中，需要等待几秒……"
 
