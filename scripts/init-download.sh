@@ -44,7 +44,7 @@ echo "lycoris 搞定"
 if [ ! -d "$model_dir/others" ]; then
   cg down StableDiffusion-others -t $model_dir
   mv StableDiffusion-others others
-  cd $models/others
+  cd $model_dir/others
 
   data="controlnet_annotator/leres/res101.pth,res101.pth
 controlnet_annotator/leres/latest_net_G.pth,latest_net_G.pth
@@ -78,10 +78,10 @@ segment_anything/sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth"
   done
 
   rm -r /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
-  ln -s $models/others/controlnet_annotator /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
+  ln -s $model_dir/others/controlnet_annotator /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
 
   rm -r /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
-  ln -s $models/others/segment_anything /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+  ln -s $model_dir/others/segment_anything /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
 fi
 echo "controlnet annotator 搞定"
 echo "segment anything + GroundingDINO 搞定"
