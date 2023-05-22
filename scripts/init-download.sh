@@ -76,6 +76,12 @@ segment_anything/sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth"
 
     mv $source_path $target_path
   done
+
+  rm -r /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
+  ln -s $models/others/controlnet_annotator /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
+
+  rm -r /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+  ln -s $models/others/segment_anything /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
 fi
 echo "controlnet annotator 搞定"
 echo "segment anything + GroundingDINO 搞定"
