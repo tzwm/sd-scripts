@@ -2,8 +2,9 @@
 
 model_dir="/root/autodl-tmp/models"
 
-cd $model_dir
 echo "首次使用需要下载一些基本的模型，应该挺快的，稍等一下"
+mkdir -p $model_dir
+cd $model_dir
 
 if [ ! -d "$model_dir/ckpt" ]; then
   cg down StableDiffusion-checkpoints/anything-v4.5-pruned-fp16.ckpt -t $model_dir
