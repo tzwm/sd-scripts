@@ -10,6 +10,6 @@ pgrep -f 'launch.py' | head -n 1 | xargs kill
 
 sleep 4
 
-export PATH="/root/stable-diffusion-webui/venv/bin:$PATH"
+#export PATH="/root/stable-diffusion-webui/venv/bin:$PATH"
 
 cd /root/stable-diffusion-webui/ && ./webui.sh -f
