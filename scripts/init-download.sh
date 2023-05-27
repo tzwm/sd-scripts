@@ -31,8 +31,8 @@ fi
 echo "embeddings 搞定"
 
 if [ ! -d "$model_dir/controlnet" ]; then
-  cg down ControlNet-v1-1 -t $model_dir
-  mv ControlNet-v1-1 controlnet
+  cg down ControlNet-v1-1-diff -t $model_dir
+  mv ControlNet-v1-1-diff controlnet
 fi
 echo "controlnet 搞定"
 
