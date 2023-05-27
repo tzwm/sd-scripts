@@ -87,6 +87,17 @@ fi
 echo "controlnet annotator 搞定"
 echo "segment anything + GroundingDINO 搞定"
 
+
+cache_backup_dir="/root/cache"
+cache_dest_dir="/root/.cache"
+if [ -d $cache_backup_dir ]; then
+  mkdir -p $cache_dest_dir
+  mv $cache_backup_dir/huggingface $cache_dest_dir/huggingface
+  mv $cache_backup_dir/clip $cache_dest_dir/clip
+  rm -r $cache_backup_dir
+fi
+echo "CLIP 和 tagger 模型搞定"
+
 #controlnet_models_urls=(
   #"https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p.pth"
   #"https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11e_sd15_ip2p.yaml"
