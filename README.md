@@ -5,3 +5,9 @@
 - ControlNet
 - CLIP and DeepBooru
 - upscale
+
+## notes
+
+- remove `clash/config.yaml`
+- remove `.cache`
+- exit tmux
