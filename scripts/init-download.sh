@@ -63,11 +63,7 @@ controlnet_annotator/mlsd/mlsd_large_512_fp32.pth,mlsd_large_512_fp32.pth
 controlnet_annotator/normal_bae/scannet.pt,scannet.pt
 controlnet_annotator/pidinet/table5_pidinet.pth,table5_pidinet.pth
 controlnet_annotator/oneformer/250_16_swin_l_oneformer_ade20k_160k.pth,250_16_swin_l_oneformer_ade20k_160k.pth
-controlnet_annotator/oneformer/150_16_swin_l_oneformer_coco_100ep.pth,150_16_swin_l_oneformer_coco_100ep.pth
-segment_anything/grounding-dino/GroundingDINO_SwinT_OGC.py,GroundingDINO_SwinT_OGC.py
-segment_anything/grounding-dino/groundingdino_swint_ogc.pth,groundingdino_swint_ogc.pth
-segment_anything/sam/PUT_YOUR_SAM_MODEL_HERE.txt,PUT_YOUR_SAM_MODEL_HERE.txt
-segment_anything/sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth"
+controlnet_annotator/oneformer/150_16_swin_l_oneformer_coco_100ep.pth,150_16_swin_l_oneformer_coco_100ep.pth"
 
   echo "$data" | while read line; do
     target_path=$(echo $line | cut -d ',' -f 1)
@@ -78,14 +74,10 @@ segment_anything/sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth"
     mv $source_path $target_path
   done
 
-  rm -r /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
-  ln -s $model_dir/others/controlnet_annotator /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
-
-  rm -r /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
-  ln -s $model_dir/others/segment_anything /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+  rm -r /root/stable-diffusion-webui/extensions-builtin/sd-webui-controlnet/annotator/downloads
+  ln -s $model_dir/others/controlnet_annotator /root/stable-diffusion-webui/extensions-builtin/sd-webui-controlnet/annotator/downloads
 fi
 echo "controlnet annotator 搞定"
-echo "segment anything + GroundingDINO 搞定"
 
 
 cache_backup_dir="/root/cache"

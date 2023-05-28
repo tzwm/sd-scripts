@@ -1,7 +1,6 @@
 #! /bin/bash
 
 mkdir -p /root/autodl-tmp/webui_outputs
-mkdir -p /root/autodl-tmp/dreambooth
 
 echo "重启中，需要等待几秒……"
 
@@ -12,4 +11,4 @@ sleep 4
 
 #export PATH="/root/stable-diffusion-webui/venv/bin:$PATH"
 
-cd /root/stable-diffusion-webui/ && ./webui.sh -f
+cd /root/stable-diffusion-webui/ && ./webui.sh -f --port 6006 --no-half-vae --no-download-sd-model --disable-safe-unpickle --ckpt /root/autodl-tmp/models/StableDiffusion-checkpoints/anything-v4.5-pruned-fp16.ckpt --noupdate
