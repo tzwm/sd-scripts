@@ -15,7 +15,7 @@ case $AutoDLRegion in
     ;;
   #西北A区
   west-A)
-    proxy=http://192.168.1.174:12798
+    proxy=http://172.18.0.86:12798
     ;;
   #佛山区
   foshan-A)
