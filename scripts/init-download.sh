@@ -7,13 +7,13 @@ mkdir -p $model_dir
 cd $model_dir
 
 if [ ! -d "$model_dir/ckpt" ]; then
-  cg down StableDiffusion-checkpoints/anything-v4.5-pruned-fp16.ckpt -t $model_dir
+  cg down StableDiffusion-checkpoints/AnythingV5_v5PrtRE.safetensors -t $model_dir
   mv StableDiffusion-checkpoints ckpt
 fi
 echo "checkpoints 搞定"
 
 if [ ! -d "$model_dir/vae" ]; then
-  cg down StableDiffusion-VAE/anything-v4.0.vae.pt -t $model_dir
+  cg down StableDiffusion-VAE/vae-ft-mse-840000-ema-pruned.safetensors -t $model_dir
   mv StableDiffusion-VAE vae
 fi
 echo "VAE 搞定"
