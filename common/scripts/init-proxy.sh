@@ -16,7 +16,7 @@ if [ "$1" = "global" ]; then
     cd /root/clash
 
     if ! [ -e "config.yaml" ]; then
-      cp /root/tzwm_sd_webui_scripts/configs/clash_config.yaml ./config.yaml
+      cp /root/tzwm-autodl-sd-webui/common/configs/clash_config.yaml ./config.yaml
       server=$(echo $http_proxy | sed 's/http:\/\/\([^:]*\):.*/\1/')
       port=$(echo $http_proxy | sed 's/.*:\([0-9]*\)$/\1/')
       sed -i "s/server_address/$server/g" config.yaml
