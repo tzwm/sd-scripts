@@ -1,6 +1,6 @@
 #! /bin/bash
 
-bash /etc/network_turbo
+source /etc/network_turbo
 
 echo 'git 科学加速启动'
 git config --global http.proxy $http_proxy
