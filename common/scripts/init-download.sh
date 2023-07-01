@@ -67,7 +67,9 @@ controlnet_annotator/oneformer/150_16_swin_l_oneformer_coco_100ep.pth,150_16_swi
 segment_anything/grounding-dino/GroundingDINO_SwinT_OGC.py,GroundingDINO_SwinT_OGC.py
 segment_anything/grounding-dino/groundingdino_swint_ogc.pth,groundingdino_swint_ogc.pth
 segment_anything/sam/PUT_YOUR_SAM_MODEL_HERE.txt,PUT_YOUR_SAM_MODEL_HERE.txt
-segment_anything/sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth"
+segment_anything/sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth
+Deforum/AdaBins_nyu.pt,AdaBins_nyu.pt
+Deforum/dpt_large-midas-2f21e586.pt,dpt_large-midas-2f21e586.pt"
 
   echo "$data" | while read line; do
     target_path=$(echo $line | cut -d ',' -f 1)
@@ -83,9 +85,13 @@ segment_anything/sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth"
 
   rm -r /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
   ln -s $model_dir/others/segment_anything /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+
+  rm -r /root/stable-diffusion-webui/models/Deforum
+  ln -s $model_dir/others/Deforum /root/stable-diffusion-webui/models/Deforum
 fi
 echo "controlnet annotator 搞定"
 echo "segment anything + GroundingDINO 搞定"
+echo "Deforum 搞定"
 
 
 cache_backup_dir="/root/cache"
