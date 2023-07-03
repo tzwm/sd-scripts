@@ -64,6 +64,7 @@ controlnet_annotator/normal_bae/scannet.pt,scannet.pt
 controlnet_annotator/pidinet/table5_pidinet.pth,table5_pidinet.pth
 controlnet_annotator/oneformer/250_16_swin_l_oneformer_ade20k_160k.pth,250_16_swin_l_oneformer_ade20k_160k.pth
 controlnet_annotator/oneformer/150_16_swin_l_oneformer_coco_100ep.pth,150_16_swin_l_oneformer_coco_100ep.pth
+controlnet_annotator/lama/ControlNetLama.pth,ControlNetLama.pth
 segment_anything/grounding-dino/GroundingDINO_SwinT_OGC.py,GroundingDINO_SwinT_OGC.py
 segment_anything/grounding-dino/groundingdino_swint_ogc.pth,groundingdino_swint_ogc.pth
 segment_anything/sam/PUT_YOUR_SAM_MODEL_HERE.txt,PUT_YOUR_SAM_MODEL_HERE.txt
