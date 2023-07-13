@@ -102,6 +102,7 @@ if [ -d $cache_backup_dir ]; then
   mkdir -p $cache_dest_dir
   mv $cache_backup_dir/huggingface $cache_dest_dir/huggingface
   mv $cache_backup_dir/clip $cache_dest_dir/clip
+  mv $cache_backup_dir/torch $cache_dest_dir/torch
   rm -r $cache_backup_dir
 fi
 echo "CLIP 和 tagger 模型搞定"
