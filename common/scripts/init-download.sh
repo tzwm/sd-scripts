@@ -8,6 +8,7 @@ cd $model_dir
 
 if [ ! -d "$model_dir/ckpt" ]; then
   cg down StableDiffusion-checkpoints/AnythingV5_v5PrtRE.safetensors -t $model_dir
+  cg down tzwm/StableDiffusion-checkpoints/majicmixRealistic_v6.safetensors -t $model_dir
   mv StableDiffusion-checkpoints ckpt
 fi
 echo "checkpoints 搞定"
@@ -34,7 +35,7 @@ if [ ! -d "$model_dir/controlnet" ]; then
   cg down ControlNet-v1-1-diff -t $model_dir
   mv ControlNet-v1-1-diff controlnet
 
-  cg down tzwm/ControlNet-others/lightingBasedPicture_v10.safetensors
+  cg down tzwm/ControlNet-others/lightingBasedPicture_v10.safetensors -t $model_dir
   mv ControlNet-others/lightingBasedPicture_v10.safetensors controlnet/
   rm -r ControlNet-others
 fi
