@@ -33,6 +33,10 @@ echo "embeddings 搞定"
 if [ ! -d "$model_dir/controlnet" ]; then
   cg down ControlNet-v1-1-diff -t $model_dir
   mv ControlNet-v1-1-diff controlnet
+
+  cg down tzwm/ControlNet-others/lightingBasedPicture_v10.safetensors
+  mv ControlNet-others/lightingBasedPicture_v10.safetensors controlnet/
+  rm -r ControlNet-others
 fi
 echo "controlnet 搞定"
 
