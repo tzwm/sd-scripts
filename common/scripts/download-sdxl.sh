@@ -21,3 +21,4 @@ cg down tzwm/stable-diffusion-xl-1.0/sd_xl_offset_example-lora_1.0.safetensors -
 mv "stable-diffusion-xl-1.0/sd_xl_offset_example-lora_1.0.safetensors" lora/
 
 rm -r stable-diffusion-xl-1.0
+echo "下载完成，已经放入对应的目录"
