@@ -6,6 +6,8 @@ echo "首次使用需要下载一些基本的模型，应该挺快的，稍等�
 mkdir -p $model_dir
 cd $model_dir
 
+cg upgrade
+
 if [ ! -d "$model_dir/ckpt" ]; then
   cg down StableDiffusion-checkpoints/AnythingV5_v5PrtRE.safetensors -t $model_dir
   cg down tzwm/StableDiffusion-checkpoints/majicmixRealistic_v6.safetensors -t $model_dir
