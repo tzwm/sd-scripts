@@ -39,6 +39,8 @@ if [ ! -d "$model_dir/controlnet" ]; then
   mv ControlNet-others/control_v1p_sd15_brightness.safetensors controlnet/
   cg down tzwm/ControlNet-others/control_v1p_sd15_illumination.safetensors -t $model_dir
   mv ControlNet-others/control_v1p_sd15_illumination.safetensors controlnet/
+  cg down tzwm/ControlNet-others/controlnetQRPatternQR_v2Sd15.safetensors -t $model_dir
+  mv ControlNet-others/controlnetQRPatternQR_v2Sd15.safetensors controlnet/
   rm -r ControlNet-others
 fi
 echo "controlnet 搞定"
