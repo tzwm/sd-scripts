@@ -51,7 +51,7 @@ if [ ! -d "$model_dir/lycoris" ]; then
 fi
 echo "lycoris 搞定"
 
-if [ ! -d "$model_dir/others/controlnet_annotator" ]; then
+if [ ! -d "$model_dir/others" ]; then
   mkdir -p others
   cd others
   mkdir -p controlnet_annotator
@@ -114,7 +114,12 @@ AnimateDiff/mm_sd_v15.ckpt,mm_sd_v15.ckpt"
   cd $model_dir
   rm -r StableDiffusion-others
 fi
-echo "controlnet annotator 搞定"
+echo "ControlNet Annotator 模型搞定"
+echo "Segment Anything 模型搞定"
+echo "GroundingDINO 模型搞定"
+echo "Deforum 模型搞定"
+echo "SadTalker 模型搞定"
+echo "AnimateDiff 模型搞定"
 
 
 cache_backup_dir="/root/cache"
