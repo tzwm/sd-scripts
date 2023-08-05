@@ -74,7 +74,17 @@ controlnet_annotator/pidinet/table5_pidinet.pth,table5_pidinet.pth
 controlnet_annotator/oneformer/250_16_swin_l_oneformer_ade20k_160k.pth,250_16_swin_l_oneformer_ade20k_160k.pth
 controlnet_annotator/oneformer/150_16_swin_l_oneformer_coco_100ep.pth,150_16_swin_l_oneformer_coco_100ep.pth
 controlnet_annotator/lama/ControlNetLama.pth,ControlNetLama.pth
-controlnet_annotator/uniformer/upernet_global_small.pth,upernet_global_small.pth"
+controlnet_annotator/uniformer/upernet_global_small.pth,upernet_global_small.pth
+segment_anything/grounding-dino/GroundingDINO_SwinT_OGC.py,GroundingDINO_SwinT_OGC.py
+segment_anything/grounding-dino/groundingdino_swint_ogc.pth,groundingdino_swint_ogc.pth
+segment_anything/sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth
+Deforum/AdaBins_nyu.pt,AdaBins_nyu.pt
+Deforum/dpt_large-midas-2f21e586.pt,dpt_large-midas-2f21e586.pt
+SadTalker/mapping_00109-model.pth.tar,mapping_00109-model.pth.tar
+SadTalker/mapping_00229-model.pth.tar,mapping_00229-model.pth.tar
+SadTalker/SadTalker_V0.0.2_256.safetensors,SadTalker_V0.0.2_256.safetensors
+SadTalker/SadTalker_V0.0.2_512.safetensors,SadTalker_V0.0.2_512.safetensors
+AnimateDiff/mm_sd_v15.ckpt,mm_sd_v15.ckpt"
 
   echo "$data" | while read line; do
     target_path=$(echo $line | cut -d ',' -f 1)
@@ -88,6 +98,18 @@ controlnet_annotator/uniformer/upernet_global_small.pth,upernet_global_small.pth
 
   rm -r /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
   ln -s $model_dir/others/controlnet_annotator /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
+
+  rm -r /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+  ln -s $model_dir/others/segment_anything /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+
+  rm -r /root/stable-diffusion-webui/models/Deforum
+  ln -s $model_dir/others/Deforum /root/stable-diffusion-webui/models/Deforum
+
+  rm -r /root/stable-diffusion-webui/extensions/SadTalker/checkpoints
+  ln -s $model_dir/others/SadTalker /root/stable-diffusion-webui/extensions/SadTalker/checkpoints
+
+  rm -r /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
+  ln -s $model_dir/others/AnimateDiff /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
 
   cd $model_dir
   rm -r StableDiffusion-others
