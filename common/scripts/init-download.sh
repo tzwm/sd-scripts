@@ -15,6 +15,7 @@ echo "checkpoints 搞定"
 
 if [ ! -d "$model_dir/vae" ]; then
   cg down StableDiffusion-VAE/vae-ft-mse-840000-ema-pruned.safetensors -t $model_dir
+  cg down tzwm/StableDiffusion-VAE/anything-v4.0.vae.pt -t $model_dir
   mv StableDiffusion-VAE vae
 fi
 echo "VAE 搞定"
