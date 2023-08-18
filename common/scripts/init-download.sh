@@ -66,6 +66,8 @@ controlnet_annotator/midas/dpt_hybrid-midas-501f0c75.pt,dpt_hybrid-midas-501f0c7
 controlnet_annotator/openpose/body_pose_model.pth,body_pose_model.pth
 controlnet_annotator/openpose/hand_pose_model.pth,hand_pose_model.pth
 controlnet_annotator/openpose/facenet.pth,facenet.pth
+controlnet_annotator/openpose/dw-ll_ucoco_384.onnx,dw-ll_ucoco_384.onnx
+controlnet_annotator/openpose/yolox_l.onnx,yolox_l.onnx
 controlnet_annotator/hed/ControlNetHED.pth,ControlNetHED.pth
 controlnet_annotator/zoedepth/ZoeD_M12_N.pt,ZoeD_M12_N.pt
 controlnet_annotator/manga_line/erika.pth,erika.pth
