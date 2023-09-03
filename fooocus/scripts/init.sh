@@ -2,8 +2,8 @@
 
 echo "初始化一下"
 
-$target_model_dir="/root/autodl-tmp/models"
-$source_model_dir="/root/Fooocus/models"
+target_model_dir="/root/autodl-tmp/models"
+source_model_dir="/root/Fooocus/models"
 
 if [ ! -d "$target_model_dir/checkpoints" ]; then
   mv $source_model_dir/checkpoints $target_model_dir/
