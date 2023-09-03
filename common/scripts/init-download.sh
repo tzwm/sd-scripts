@@ -164,7 +164,7 @@ if [ "$1" == "cache" ] && [ -d $cache_backup_dir ]; then
   mkdir -p $cache_dest_dir
   mv $cache_backup_dir/huggingface $cache_dest_dir/huggingface
   mv $cache_backup_dir/clip $cache_dest_dir/clip
-  mv $cache_backup_dir/torch $cache_dest_dir/torch
+  mv $cache_backup_dir/torch $cache_dest_dir/torch 2> /dev/null
   rm -r $cache_backup_dir
 
   echo -e ">>>> CLIP 和 tagger 模型搞定\n"
