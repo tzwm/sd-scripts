@@ -6,11 +6,11 @@ echo "下载 SDXL base、refiner、VAE 和 LoRA 模型"
 mkdir -p $model_dir
 cd $model_dir
 
-mkdir -p $model_dir/ckpt
+mkdir -p $model_dir/checkpoint
 cg down tzwm/stable-diffusion-xl-1.0/sd_xl_base_1.0.safetensors -t $model_dir
 cg down tzwm/stable-diffusion-xl-1.0/sd_xl_refiner_1.0.safetensors -t $model_dir
-mv "stable-diffusion-xl-1.0/sd_xl_base_1.0.safetensors" ckpt/
-mv "stable-diffusion-xl-1.0/sd_xl_refiner_1.0.safetensors" ckpt/
+mv "stable-diffusion-xl-1.0/sd_xl_base_1.0.safetensors" checkpoint/
+mv "stable-diffusion-xl-1.0/sd_xl_refiner_1.0.safetensors" checkpoint/
 
 mkdir -p $model_dir/vae
 cg down tzwm/stable-diffusion-xl-1.0/sdxl_vae.safetensors -t $model_dir
