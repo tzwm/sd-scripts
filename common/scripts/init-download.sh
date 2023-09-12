@@ -164,7 +164,10 @@ pidinet/table5_pidinet.pth,table5_pidinet.pth
 oneformer/250_16_swin_l_oneformer_ade20k_160k.pth,250_16_swin_l_oneformer_ade20k_160k.pth
 oneformer/150_16_swin_l_oneformer_coco_100ep.pth,150_16_swin_l_oneformer_coco_100ep.pth
 lama/ControlNetLama.pth,ControlNetLama.pth
-uniformer/upernet_global_small.pth,upernet_global_small.pth"
+uniformer/upernet_global_small.pth,upernet_global_small.pth
+clip_vision/clip_h.pth,clip_h.pth
+clip_vision/clip_g.pth,clip_g.pth"
+#clip_vision/clip_vitl.pth,clip_vitl.pth"
 
   cgdown "$1" "$data" "StableDiffusion-others"
 
