@@ -5,8 +5,6 @@ model_dir="/root/autodl-tmp/models"
 mkdir -p $model_dir
 cd $model_dir
 
-cg upgrade
-
 # model_type, data(dir, cg_name), cg_repo, [optional]target_dir
 function cgdown() {
   mkdir -p $1
@@ -37,9 +35,8 @@ function cgdown() {
 function check_and_download() {
   if [ "$1" == "$2" ]; then
     cgdown "$1" "$3" "$4"
+    echo -e ">>>> $1 搞定\n"
   fi
-
-  echo -e ">>>> $1 搞定\n"
 }
 
 
@@ -61,7 +58,7 @@ data="easy_negative.safetensors,easy_negative.safetensors"
 check_and_download "$1" "embeddings" "$data" "StableDiffusion-Embeddings"
 
 
-#controlnet sd1.5
+#controlnet sd1.5 v1.1
 data="control_v11f1e_sd15_tile_fp16.safetensors,control_v11f1e_sd15_tile_fp16.safetensors
 control_v11f1p_sd15_depth_fp16.safetensors,control_v11f1p_sd15_depth_fp16.safetensors
 control_v11p_sd15_lineart_fp16.safetensors,control_v11p_sd15_lineart_fp16.safetensors
@@ -90,16 +87,20 @@ control_v11p_sd15_inpaint.yaml,control_v11p_sd15_inpaint.yaml"
 #control_v11p_sd15_seg.yaml,control_v11p_sd15_seg.yaml
 #control_v11p_sd15_softedge.yaml,control_v11p_sd15_softedge.yaml
 #control_v11p_sd15s2_lineart_anime.yaml,control_v11p_sd15s2_lineart_anime.yaml
-check_and_download "$1" "controlnet_sd15" "$data" "ControlNet-v1-1-diff" "controlnet"
+check_and_download "$1" "controlnet_sd15_v1_1" "$data" "ControlNet-v1-1-diff" "controlnet"
 
 data="control_v1p_sd15_brightness.safetensors,control_v1p_sd15_brightness.safetensors"
 #control_v1p_sd15_illumination.safetensors,control_v1p_sd15_illumination.safetensors
 #controlnetQRPatternQR_v2Sd15.safetensors,controlnetQRPatternQR_v2Sd15.safetensors"
-check_and_download "$1" "controlnet_sd15" "$data" "ControlNet-others" "controlnet"
+check_and_download "$1" "controlnet_sd15_others" "$data" "ControlNet-others" "controlnet"
+
+data="ioclab_sd15_recolor.safetensors,ioclab_sd15_recolor.safetensors
+ip-adapter_sd15.pth,ip-adapter_sd15.pth
+ip-adapter_sd15_plus.pth,ip-adapter_sd15_plus.pth"
+check_and_download "$1" "controlnet_sd15_v1_1_400" "$data" "ControlNet-SDXL" "controlnet"
 
 #controlnet sdxl
-data="
-"
+data=""
 check_and_download "$1" "controlnet_sdxl" "$data" "ControlNet-SDXL" "controlnet"
 
 
