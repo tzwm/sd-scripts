@@ -28,7 +28,9 @@ function cgdown() {
     mv "$model_dir/$3/$source_path" $target_path
   done
 
-  rm -r $3
+  if [ -e "$3" ]; then
+    rm -r $3
+  fi
 }
 
 # input, model_type, data(dir, cg_name), cg_repo
@@ -100,8 +102,8 @@ ip-adapter_sd15_plus.pth,ip-adapter_sd15_plus.pth"
 check_and_download "$1" "controlnet_sd15_v1_1_400" "$data" "ControlNet-SDXL" "controlnet"
 
 #controlnet sdxl
-data=""
-check_and_download "$1" "controlnet_sdxl" "$data" "ControlNet-SDXL" "controlnet"
+data="ip-adapter_xl.pth,ip-adapter_xl.pth"
+check_and_download "$1" "controlnet_sdxl_v1_1_400" "$data" "ControlNet-SDXL" "controlnet"
 
 
 data="InsPX.safetensors,InsPX.safetensors"
