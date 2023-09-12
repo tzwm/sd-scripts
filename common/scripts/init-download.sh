@@ -43,7 +43,9 @@ majicmixRealistic_v6.safetensors,majicmixRealistic_v6.safetensors"
   cgdown "$1" "$data" "StableDiffusion-checkpoints"
 
   #fix old path
-  ln -s $model_dir/ckpt $model_dir/$1/ckpt
+  if [ -d "$model_dir/ckpt" ] && [ ! -d "$model_dir/$1/ckpt" ]; then
+    ln -s $model_dir/ckpt $model_dir/$1/ckpt
+  fi
 fi
 
 if [ "$1" == "vae" ]; then
