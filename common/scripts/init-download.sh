@@ -201,9 +201,9 @@ SadTalker_V0.0.2_512.safetensors,SadTalker_V0.0.2_512.safetensors"
 fi
 
 if [ "$1" == "AnimateDiff" ]; then
-  data="mm_sd_v15.ckpt,mm_sd_v15.ckpt"
+  data="temporaldiff-v1-animatediff.ckpt,temporaldiff-v1-animatediff.ckpt"
 
-  check_and_download "$1" "$data" "StableDiffusion-others"
+  cgdown "$1" "$data" "StableDiffusion-others"
 
   rm -r /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
   ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
