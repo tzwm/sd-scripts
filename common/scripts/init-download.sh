@@ -41,6 +41,9 @@ if [ "$1" == "checkpoint" ]; then
 majicmixRealistic_v6.safetensors,majicmixRealistic_v6.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-checkpoints"
+
+  #fix old path
+  ln -s $model_dir/ckpt $model_dir/$1/ckpt
 fi
 
 if [ "$1" == "vae" ]; then
