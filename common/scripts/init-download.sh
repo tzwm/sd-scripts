@@ -31,37 +31,40 @@ function cgdown() {
   if [ -e "$3" ]; then
     rm -r $3
   fi
-}
 
-# input, model_type, data(dir, cg_name), cg_repo, [optional]target_dir
-function check_and_download() {
-  if [ "$1" == "$2" ]; then
-    cgdown "$1" "$3" "$4" $5
-    echo -e ">>>> $1 搞定\n"
-  fi
+  echo -e ">>>> $1 搞定\n"
 }
 
 
-data="AnythingV5_v5PrtRE.safetensors,AnythingV5_v5PrtRE.safetensors
+if [ "$1" == "checkpoint" ]; then
+  data="AnythingV5_v5PrtRE.safetensors,AnythingV5_v5PrtRE.safetensors
 majicmixRealistic_v6.safetensors,majicmixRealistic_v6.safetensors"
-check_and_download "$1" "checkpoint" "$data" "StableDiffusion-checkpoints"
 
+  cgdown "$1" "$data" "StableDiffusion-checkpoints"
+fi
 
-data="vae-ft-mse-840000-ema-pruned.safetensors,vae-ft-mse-840000-ema-pruned.safetensors
+if [ "$1" == "vae" ]; then
+  data="vae-ft-mse-840000-ema-pruned.safetensors,vae-ft-mse-840000-ema-pruned.safetensors
 anything-v4.0.vae.pt,anything-v4.0.vae.pt"
-check_and_download "$1" "vae" "$data" "StableDiffusion-VAE"
 
+  cgdown "$1" "$data" "StableDiffusion-VAE"
+fi
 
-data="pensketch_lora_v2.3.safetensors,pensketch_lora_v2.3.safetensors"
-check_and_download "$1" "lora" "$data" "StableDiffusion-LoRAs"
+if [ "$1" == "lora" ]; then
+  data="pensketch_lora_v2.3.safetensors,pensketch_lora_v2.3.safetensors"
 
+  cgdown "$1" "$data" "StableDiffusion-LoRAs"
+fi
 
-data="easy_negative.safetensors,easy_negative.safetensors"
-check_and_download "$1" "embeddings" "$data" "StableDiffusion-Embeddings"
+if [ "$1" == "embeddings" ]; then
+  data="easy_negative.safetensors,easy_negative.safetensors"
 
+  cgdown "$1" "$data" "StableDiffusion-Embeddings"
+fi
 
 #controlnet sd1.5 v1.1
-data="control_v11f1e_sd15_tile_fp16.safetensors,control_v11f1e_sd15_tile_fp16.safetensors
+if [ "$1" == "controlnet_sd15_v1_1" ]; then
+  data="control_v11f1e_sd15_tile_fp16.safetensors,control_v11f1e_sd15_tile_fp16.safetensors
 control_v11f1p_sd15_depth_fp16.safetensors,control_v11f1p_sd15_depth_fp16.safetensors
 control_v11p_sd15_lineart_fp16.safetensors,control_v11p_sd15_lineart_fp16.safetensors
 control_v11p_sd15_openpose_fp16.safetensors,control_v11p_sd15_openpose_fp16.safetensors
@@ -89,20 +92,29 @@ control_v11p_sd15_inpaint.yaml,control_v11p_sd15_inpaint.yaml"
 #control_v11p_sd15_seg.yaml,control_v11p_sd15_seg.yaml
 #control_v11p_sd15_softedge.yaml,control_v11p_sd15_softedge.yaml
 #control_v11p_sd15s2_lineart_anime.yaml,control_v11p_sd15s2_lineart_anime.yaml
-check_and_download "$1" "controlnet_sd15_v1_1" "$data" "ControlNet-v1-1-diff" "controlnet"
 
-data="control_v1p_sd15_brightness.safetensors,control_v1p_sd15_brightness.safetensors"
+  cgdown "$1" "$data" "ControlNet-v1-1-diff" "controlnet"
+fi
+
+if [ "$1" == "controlnet_sd15_others" ]; then
+  data="control_v1p_sd15_brightness.safetensors,control_v1p_sd15_brightness.safetensors"
 #control_v1p_sd15_illumination.safetensors,control_v1p_sd15_illumination.safetensors
 #controlnetQRPatternQR_v2Sd15.safetensors,controlnetQRPatternQR_v2Sd15.safetensors"
-check_and_download "$1" "controlnet_sd15_others" "$data" "ControlNet-others" "controlnet"
 
-data="ioclab_sd15_recolor.safetensors,ioclab_sd15_recolor.safetensors
+  cgdown "$1" "$data" "ControlNet-others" "controlnet"
+fi
+
+if [ "$1" == "controlnet_sd15_v1_1_400" ]; then
+  data="ioclab_sd15_recolor.safetensors,ioclab_sd15_recolor.safetensors
 ip-adapter_sd15.pth,ip-adapter_sd15.pth
 ip-adapter_sd15_plus.pth,ip-adapter_sd15_plus.pth"
-check_and_download "$1" "controlnet_sd15_v1_1_400" "$data" "ControlNet-SDXL" "controlnet"
+
+  cgdown "$1" "$data" "ControlNet-SDXL" "controlnet"
+fi
 
 #controlnet sdxl
-data="ip-adapter_xl.pth,ip-adapter_xl.pth
+if [ "$1" == "controlnet_sdxl_v1_1_400" ]; then
+  data="ip-adapter_xl.pth,ip-adapter_xl.pth
 sai_xl_canny_256lora.safetensors,sai_xl_canny_256lora.safetensors
 sai_xl_depth_256lora.safetensors,sai_xl_depth_256lora.safetensors
 sai_xl_recolor_256lora.safetensors,sai_xl_recolor_256lora.safetensors
@@ -116,14 +128,18 @@ t2i-adapter_diffusers_xl_depth_zoe.safetensors,t2i-adapter_diffusers_xl_depth_zo
 t2i-adapter_diffusers_xl_lineart.safetensors,t2i-adapter_diffusers_xl_lineart.safetensors
 t2i-adapter_diffusers_xl_sketch.safetensors,t2i-adapter_diffusers_xl_sketch.safetensors
 t2i-adapter_diffusers_xl_openpose.safetensors,t2i-adapter_diffusers_xl_openpose.safetensors"
-check_and_download "$1" "controlnet_sdxl_v1_1_400" "$data" "ControlNet-SDXL" "controlnet"
 
+  cgdown "$1" "$data" "ControlNet-SDXL" "controlnet"
+fi
 
-data="InsPX.safetensors,InsPX.safetensors"
-check_and_download "$1" "lycoris" "$data" "StableDiffusion-lycoris"
+if [ "$1" == "lycoris" ]; then
+  data="InsPX.safetensors,InsPX.safetensors"
 
+  cgdown "$1" "$data" "StableDiffusion-lycoris"
+fi
 
-data="leres/res101.pth,res101.pth
+if [ "$1" == "controlnet_annotator" ]; then
+  data="leres/res101.pth,res101.pth
 leres/latest_net_G.pth,latest_net_G.pth
 lineart_anime/netG.pth,netG.pth
 lineart/sk_model.pth,sk_model.pth
@@ -144,39 +160,54 @@ oneformer/250_16_swin_l_oneformer_ade20k_160k.pth,250_16_swin_l_oneformer_ade20k
 oneformer/150_16_swin_l_oneformer_coco_100ep.pth,150_16_swin_l_oneformer_coco_100ep.pth
 lama/ControlNetLama.pth,ControlNetLama.pth
 uniformer/upernet_global_small.pth,upernet_global_small.pth"
-check_and_download "$1" "controlnet_annotator" "$data" "StableDiffusion-others"
-rm -r /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
-ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
 
+  cgdown "$1" "$data" "StableDiffusion-others"
 
-data="grounding-dino/GroundingDINO_SwinT_OGC.py,GroundingDINO_SwinT_OGC.py
+  rm -r /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
+  ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-controlnet/annotator/downloads
+fi
+
+if [ "$1" == "segment_anything" ]; then
+  data="grounding-dino/GroundingDINO_SwinT_OGC.py,GroundingDINO_SwinT_OGC.py
 grounding-dino/groundingdino_swint_ogc.pth,groundingdino_swint_ogc.pth
 sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth"
-check_and_download "$1" "segment_anything" "$data" "StableDiffusion-others"
-rm -r /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
-ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
 
+  cgdown "$1" "$data" "StableDiffusion-others"
 
-data="AdaBins_nyu.pt,AdaBins_nyu.pt
+  rm -r /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+  ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+fi
+
+if [ "$1" == "Deforum" ]; then
+  data="AdaBins_nyu.pt,AdaBins_nyu.pt
 dpt_large-midas-2f21e586.pt,dpt_large-midas-2f21e586.pt"
-check_and_download "$1" "Deforum" "$data" "StableDiffusion-others"
-rm -r /root/stable-diffusion-webui/models/Deforum
-ln -s $model_dir/$1 /root/stable-diffusion-webui/models/Deforum
 
+  cgdown "$1" "$data" "StableDiffusion-others"
 
-data="mapping_00109-model.pth.tar,mapping_00109-model.pth.tar
+  rm -r /root/stable-diffusion-webui/models/Deforum
+  ln -s $model_dir/$1 /root/stable-diffusion-webui/models/Deforum
+fi
+
+if [ "$1" == "SadTalker" ]; then
+  data="mapping_00109-model.pth.tar,mapping_00109-model.pth.tar
 mapping_00229-model.pth.tar,mapping_00229-model.pth.tar
 SadTalker_V0.0.2_256.safetensors,SadTalker_V0.0.2_256.safetensors
 SadTalker_V0.0.2_512.safetensors,SadTalker_V0.0.2_512.safetensors"
-check_and_download "$1" "SadTalker" "$data" "StableDiffusion-others"
-rm -r /root/stable-diffusion-webui/extensions/SadTalker/checkpoints
-ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/SadTalker/checkpoints
 
+  cgdown "$1" "$data" "StableDiffusion-others"
 
-data="mm_sd_v15.ckpt,mm_sd_v15.ckpt"
-check_and_download "$1" "AnimateDiff" "$data" "StableDiffusion-others"
-rm -r /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
-ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
+  rm -r /root/stable-diffusion-webui/extensions/SadTalker/checkpoints
+  ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/SadTalker/checkpoints
+fi
+
+if [ "$1" == "AnimateDiff" ]; then
+  data="mm_sd_v15.ckpt,mm_sd_v15.ckpt"
+
+  check_and_download "$1" "$data" "StableDiffusion-others"
+
+  rm -r /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
+  ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
+fi
 
 
 cache_backup_dir="/root/cache"
