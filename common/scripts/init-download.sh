@@ -102,7 +102,15 @@ ip-adapter_sd15_plus.pth,ip-adapter_sd15_plus.pth"
 check_and_download "$1" "controlnet_sd15_v1_1_400" "$data" "ControlNet-SDXL" "controlnet"
 
 #controlnet sdxl
-data="ip-adapter_xl.pth,ip-adapter_xl.pth"
+data="ip-adapter_xl.pth,ip-adapter_xl.pth
+sai_xl_canny_256lora.safetensors,sai_xl_canny_256lora.safetensors
+sai_xl_depth_256lora.safetensors,sai_xl_depth_256lora.safetensors
+sai_xl_recolor_256lora.safetensors,sai_xl_recolor_256lora.safetensors
+sai_xl_sketch_256lora.safetensors,sai_xl_sketch_256lora.safetensors
+kohya_controllllite_xl_blur.safetensors,kohya_controllllite_xl_blur.safetensors
+kohya_controllllite_xl_blur_anime.safetensors,kohya_controllllite_xl_blur_anime.safetensors
+kohya_controllllite_xl_scribble_anime.safetensors,kohya_controllllite_xl_scribble_anime.safetensors
+t2i-adapter_diffusers_xl_openpose.safetensors,t2i-adapter_diffusers_xl_openpose.safetensors"
 check_and_download "$1" "controlnet_sdxl_v1_1_400" "$data" "ControlNet-SDXL" "controlnet"
 
 
