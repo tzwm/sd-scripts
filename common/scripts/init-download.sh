@@ -7,8 +7,6 @@ cd $model_dir
 
 # model_type, data(dir, cg_name), cg_repo, [optional]target_dir
 function cgdown() {
-  mkdir -p $1
-
   local data=$2
   local target_dir="$1"
   if [ -n "$4" ]; then
