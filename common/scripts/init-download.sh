@@ -33,10 +33,10 @@ function cgdown() {
   fi
 }
 
-# input, model_type, data(dir, cg_name), cg_repo
+# input, model_type, data(dir, cg_name), cg_repo, [optional]target_dir
 function check_and_download() {
   if [ "$1" == "$2" ]; then
-    cgdown "$1" "$3" "$4"
+    cgdown "$1" "$3" "$4" $5
     echo -e ">>>> $1 搞定\n"
   fi
 }
@@ -110,6 +110,11 @@ sai_xl_sketch_256lora.safetensors,sai_xl_sketch_256lora.safetensors
 kohya_controllllite_xl_blur.safetensors,kohya_controllllite_xl_blur.safetensors
 kohya_controllllite_xl_blur_anime.safetensors,kohya_controllllite_xl_blur_anime.safetensors
 kohya_controllllite_xl_scribble_anime.safetensors,kohya_controllllite_xl_scribble_anime.safetensors
+t2i-adapter_diffusers_xl_canny.safetensors,t2i-adapter_diffusers_xl_canny.safetensors
+t2i-adapter_diffusers_xl_depth_midas.safetensors,t2i-adapter_diffusers_xl_depth_midas.safetensors
+t2i-adapter_diffusers_xl_depth_zoe.safetensors,t2i-adapter_diffusers_xl_depth_zoe.safetensors
+t2i-adapter_diffusers_xl_lineart.safetensors,t2i-adapter_diffusers_xl_lineart.safetensors
+t2i-adapter_diffusers_xl_sketch.safetensors,t2i-adapter_diffusers_xl_sketch.safetensors
 t2i-adapter_diffusers_xl_openpose.safetensors,t2i-adapter_diffusers_xl_openpose.safetensors"
 check_and_download "$1" "controlnet_sdxl_v1_1_400" "$data" "ControlNet-SDXL" "controlnet"
 
