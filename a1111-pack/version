@@ -1,0 +1,60 @@
+- 20230910 v7.0 (v17)
+  - 更新 webui 到 v1.6.0
+  - 更新 ControlNet 到 v1.1.410，其他预置插件也更新到最新版本
+  - 优化初始化脚本
+  - 替换 tagger 插件为社区活跃版本
+  - 新增 StyleSelectorXL(强烈安利 SDXL 用户使用) 和 sd-webui-faceswaplab(高级版 roop) 插件
+  - 换了个新的双语插件
+  - 更新了下 SD 1.5 + SDXL 的各种模型预置，实在塞不下了，只能有所取舍了……(难 -_-!
+- 20230806 v6.1 (v16)
+  - 新增 api-payload-display 和 oldsix-prompt 插件
+  - 重新把一些模型的目录改回了数据盘，make system disk free again
+  - 新增 UltraSharp 4x upscaler
+  - 补了下 XL 的 VAE-approx
+- 20230729 v6.0 (v15)
+  - 升到最新 webui 到 1.5.1 支持 sdxl
+  - ControlNet 光影模型更新
+  - 装了下 TCMalloc 依赖，减少内存泄漏
+  - 默认使用 Infinite image browsing 替代 Image Browser
+  - 新增 Inpaint Anything 和 model-keyword 插件，默认关闭
+- 20230724 v5.3 (v14)
+  - 新增 AnimateDiff 和 SadTalker 插件
+  - 稍微调整了下模型路径，把 Segment Anything 和 Deforum 模型挪回了系统盘
+  - 新增了一个写实模型，方便开箱画画
+  - 默认打开 adetailer 插件，因为画写实的情况下用得比较多并且效果不错
+  - 调整输出的图片格式为质量 100% 的 JPEG
+  - 修复 adetailer 中找不到 controlnet 模型的问题
+- 20230713 v5.2 (v13)
+  - 补充了 GFPGAN 和 upernet_global_small 两个 model
+  - 增加 sd-dynamic-prompts 和 TemporalKit 两个插件
+  - 修复 Jupyter 没法右键的问题（删掉了 jupyter-archive）
+- 20230704 v5.1 (v12)
+  - 补了下 inpaint_lama 模型，之前漏了
+  - 补了下跟 ControlNet 集成的 Openpose editor 插件
+  - 更新了下所有插件版本
+- 20230702 v5.0 (v11)
+  - webui 升级到 1.4.0，对应依赖库也升级
+  - 调整了插件，默认不开启全部插件了
+  - 学术加速的加载更新成了 autodl 最新的
+  - 其他一些小优化
+- 20230528 v4.2 (v10)
+  - 替换 anything v4.5 到 anything v5.0 正版
+  - 工具箱增加了一些常用执行，包括热修复功能（后续总算可以不用频繁发镜像了）
+  - 修复了西北区的网络问题
+- 20230525 v4.1 (v9)
+  - 替换 controlnet 1.1 模型为 fp16 版本，空间利用和使用速度都有提升
+  - 修复 CLIP 等模型的 cache 问题
+  - 修复了界面总是断连的问题，因此去除了 train-tools 插件
+  - 默认安装了 aria2
+- 20230525 v4.0 (v8)
+  - 新增炼丹相关插件，包括 dreambooth、Dataset Tag Editor、Train Tools
+  - 新增 Segment Anything + GroundingDINO，包含相关模型
+  - 新增 tagger、a1111-sd-webui-lycoris、sd-webui-lora-block-weight、ultimate-upscale、all in one、deforum 这六个实用插件
+  - 更新 controlnet，预置了所有预处理器包含新的 reference
+  - clash 更方便支持自定义 config、补了下佛山区的代理配置
+  - 修复之前部分插件安装问题
+- 20230507 v3.0 (v5)
+  - A1111 版本更新，升级 python, torch 等版本，换上 controlnet v1.1，一些细节优化
+- 20230429 v2.0
+  - 换成 vlad webui，换上了 controlnet v1.1，更新了模型下载方式等
+- 20230413 v1.0
