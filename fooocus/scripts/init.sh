@@ -8,8 +8,8 @@ source_model_dir="/root/Fooocus/models"
 mkdir -p $target_model_dir
 
 if [ ! -d "$target_model_dir/checkpoint" ]; then
-  mv $source_model_dir/checkpoints $target_model_dir/checkpoint
-  ln -s $target_model_dir/checkpoint $source_model_dir/checkpoints
+  mv $source_model_dir/checkpoints $target_model_dir/checkpoints
+  ln -s $target_model_dir/checkpoints $source_model_dir/checkpoints
 fi
 
 if [ ! -d "$target_model_dir/loras" ]; then
