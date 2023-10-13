@@ -1,3 +1,6 @@
+- 20231013 v1.3 (v4)
+  - 升级到最新的 Fooocus v2.1，支持 image prompt
+  - 修复 checkpoints 目录没法在 JupyterLab 里打开的问题
 - 20230922 v1.2 (v3)
   - 升级到最新的 Fooocus，支持 inpaint，包含新的优化
 - 20230901 v1.1 (v2)
