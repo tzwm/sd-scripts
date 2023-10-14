@@ -6,6 +6,12 @@ if [ ! -d "/root/autodl-tmp/outputs" ]; then
   mkdir -p /root/autodl-tmp/outputs
 fi
 
+preset="sdxl"
+if [ ! -z "$1" ]; then
+  preset=$1
+fi
+
 source /root/tzwm-autodl/common/scripts/init-proxy.sh && \
-unset http_proxy https_proxy all_proxy && \
-cd /root/Fooocus && source venv/bin/activate && python launch.py --port 6006 --listen 0.0.0.0
+cd /root/Fooocus && \
+source venv/bin/activate && \
+python launch.py --port 6006 --listen 0.0.0.0 --preset $preset

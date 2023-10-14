@@ -1,4 +1,8 @@
-- 20231013 v1.3 (v4)
+- 20231013 v1.4 (v6)
+  - 升级到 Fooocus v2.1.60
+  - 支持 anime 和 realistic preset，可以在启动的时候选择
+  - 预置了 fooocus 官方的 anime 和 realistic 所有模型
+- 20231013 v1.3 (v5)
   - 升级到最新的 Fooocus v2.1，支持 image prompt
   - 修复 checkpoints 目录没法在 JupyterLab 里打开的问题
 - 20230922 v1.2 (v3)
