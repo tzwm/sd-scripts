@@ -12,6 +12,13 @@ function cgdown() {
   if [ -n "$4" ]; then
     target_dir="$4"
   fi
+
+  init_file="$target_dir/.tzwm_init_$1"
+  if [ -e $init_file ]; then
+    echo -e ">>>> $1 搞定\n"
+    return
+  fi
+
   echo "$data" | while read line; do
     target_path="$target_dir/$(echo $line | cut -d ',' -f 1)"
     source_path=$(echo $line | cut -d ',' -f 2)
@@ -30,6 +37,7 @@ function cgdown() {
     rm -r $3
   fi
 
+  echo $(date +%s) > $init_file
   echo -e ">>>> $1 搞定\n"
 }
 
