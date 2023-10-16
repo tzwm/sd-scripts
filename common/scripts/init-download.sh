@@ -215,9 +215,19 @@ SadTalker_V0.0.2_512.safetensors,SadTalker_V0.0.2_512.safetensors"
 fi
 
 if [ "$1" == "AnimateDiff" ]; then
-  data="temporaldiff-v1-animatediff.ckpt,temporaldiff-v1-animatediff.ckpt"
+  data="temporaldiff-v1-animatediff.ckpt,temporaldiff-v1-animatediff.ckpt
+hsxl_temporal_layers.f16.safetensors,hsxl_temporal_layers.f16.safetensors
+mm_sd_v15_v2.ckpt,mm_sd_v15_v2.ckpt
+loras/v2_lora_PanLeft.ckpt,v2_lora_PanLeft.ckpt
+loras/v2_lora_PanRight.ckpt,v2_lora_PanRight.ckpt
+loras/v2_lora_RollingAnticlockwise.ckpt,v2_lora_RollingAnticlockwise.ckpt
+loras/v2_lora_RollingClockwise.ckpt,v2_lora_RollingClockwise.ckpt
+loras/v2_lora_TiltDown.ckpt,v2_lora_TiltDown.ckpt
+loras/v2_lora_TiltUp.ckpt,v2_lora_TiltUp.ckpt
+loras/v2_lora_ZoomIn.ckpt,v2_lora_ZoomIn.ckpt
+loras/v2_lora_ZoomOut.ckpt,v2_lora_ZoomOut.ckpt"
 
-  cgdown "$1" "$data" "StableDiffusion-others"
+  cgdown "$1" "$data" "AnimateDiff-Models"
 
   rm -r /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
   ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
