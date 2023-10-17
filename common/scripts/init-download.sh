@@ -240,14 +240,14 @@ mm_sd_v15_v2.ckpt,mm_sd_v15_v2.ckpt"
 fi
 
 if [ "$1" == "animatediff_lora" ]; then
-  data="loras/v2_lora_PanLeft.ckpt,v2_lora_PanLeft.ckpt
-loras/v2_lora_PanRight.ckpt,v2_lora_PanRight.ckpt
-loras/v2_lora_RollingAnticlockwise.ckpt,v2_lora_RollingAnticlockwise.ckpt
-loras/v2_lora_RollingClockwise.ckpt,v2_lora_RollingClockwise.ckpt
-loras/v2_lora_TiltDown.ckpt,v2_lora_TiltDown.ckpt
-loras/v2_lora_TiltUp.ckpt,v2_lora_TiltUp.ckpt
-loras/v2_lora_ZoomIn.ckpt,v2_lora_ZoomIn.ckpt
-loras/v2_lora_ZoomOut.ckpt,v2_lora_ZoomOut.ckpt"
+  data="v2_lora_PanLeft.ckpt,v2_lora_PanLeft.ckpt
+v2_lora_PanRight.ckpt,v2_lora_PanRight.ckpt
+v2_lora_RollingAnticlockwise.ckpt,v2_lora_RollingAnticlockwise.ckpt
+v2_lora_RollingClockwise.ckpt,v2_lora_RollingClockwise.ckpt
+v2_lora_TiltDown.ckpt,v2_lora_TiltDown.ckpt
+v2_lora_TiltUp.ckpt,v2_lora_TiltUp.ckpt
+v2_lora_ZoomIn.ckpt,v2_lora_ZoomIn.ckpt
+v2_lora_ZoomOut.ckpt,v2_lora_ZoomOut.ckpt"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
 fi
