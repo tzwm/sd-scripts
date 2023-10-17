@@ -2,6 +2,7 @@
   - Python 版本升到 3.10.8
   - 新增 AnimateDiff-Evolved、ControlNet、FizzNodes 等一系列插件
   - 增加 AnimateDiff 相关 motion 和 lora 模型
+  - 新增 AIGODLIKE-ComfyUI-Translation 插件，默认开启汉化版 ComfyUI
 - 20230903 v1.1 (v2)
   - 增加 ComfyUI-Manager 插件管理器
   - 调整模型路径和初始化脚本
