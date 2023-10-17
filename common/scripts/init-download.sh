@@ -42,11 +42,23 @@ function cgdown() {
 }
 
 
-if [ "$1" == "checkpoint" ]; then
+if [ "$1" == "checkpoint_sd15" ]; then
   data="AnythingV5_v5PrtRE.safetensors,AnythingV5_v5PrtRE.safetensors
 majicmixRealistic_v6.safetensors,majicmixRealistic_v6.safetensors"
 
-  cgdown "$1" "$data" "StableDiffusion-checkpoints"
+  cgdown "$1" "$data" "StableDiffusion-checkpoints" "checkpoint"
+
+  #fix old path
+  if [ -d "$model_dir/ckpt" ] && [ ! -d "$model_dir/$1/ckpt" ]; then
+    ln -s $model_dir/ckpt $model_dir/$1/ckpt
+  fi
+fi
+
+if [ "$1" == "checkpoint_sdxl" ]; then
+  data="sd_xl_base_1.0.safetensors,sd_xl_base_1.0.safetensors
+sd_xl_refiner_1.0.safetensors,sd_xl_refiner_1.0.safetensors"
+
+  cgdown "$1" "$data" "StableDiffusion-checkpoints" "checkpoint"
 
   #fix old path
   if [ -d "$model_dir/ckpt" ] && [ ! -d "$model_dir/$1/ckpt" ]; then
@@ -56,13 +68,15 @@ fi
 
 if [ "$1" == "vae" ]; then
   data="vae-ft-mse-840000-ema-pruned.safetensors,vae-ft-mse-840000-ema-pruned.safetensors
-anything-v4.0.vae.pt,anything-v4.0.vae.pt"
+anything-v4.0.vae.pt,anything-v4.0.vae.pt
+sdxl_vae.safetensors,sdxl_vae.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-VAE"
 fi
 
 if [ "$1" == "lora" ]; then
-  data="pensketch_lora_v2.3.safetensors,pensketch_lora_v2.3.safetensors"
+  data="pensketch_lora_v2.3.safetensors,pensketch_lora_v2.3.safetensors,
+sd_xl_offset_example-lora_1.0.safetensors,sd_xl_offset_example-lora_1.0.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-LoRAs"
 fi
