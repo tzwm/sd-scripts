@@ -88,7 +88,40 @@ if [ "$1" == "embeddings" ]; then
 fi
 
 #controlnet sd1.5 v1.1
-if [ "$1" == "controlnet_sd15_v1_1" ]; then
+if [ "$1" == "controlnet_sd15_v1_1_full" ]; then
+  data="control_v11f1e_sd15_tile_fp16.safetensors,control_v11f1e_sd15_tile_fp16.safetensors
+control_v11f1p_sd15_depth_fp16.safetensors,control_v11f1p_sd15_depth_fp16.safetensors
+control_v11p_sd15_lineart_fp16.safetensors,control_v11p_sd15_lineart_fp16.safetensors
+control_v11p_sd15_openpose_fp16.safetensors,control_v11p_sd15_openpose_fp16.safetensors
+control_v11p_sd15_inpaint_fp16.safetensors,control_v11p_sd15_inpaint_fp16.safetensors
+control_v11p_sd15_canny_fp16.safetensors,control_v11p_sd15_canny_fp16.safetensors
+control_v11e_sd15_ip2p_fp16.safetensors,control_v11e_sd15_ip2p_fp16.safetensors
+control_v11e_sd15_shuffle_fp16.safetensors,control_v11e_sd15_shuffle_fp16.safetensors
+control_v11p_sd15_mlsd_fp16.safetensors,control_v11p_sd15_mlsd_fp16.safetensors
+control_v11p_sd15_normalbae_fp16.safetensors,control_v11p_sd15_normalbae_fp16.safetensors
+control_v11p_sd15_scribble_fp16.safetensors,control_v11p_sd15_scribble_fp16.safetensors
+control_v11p_sd15_seg_fp16.safetensors,control_v11p_sd15_seg_fp16.safetensors
+control_v11p_sd15_softedge_fp16.safetensors,control_v11p_sd15_softedge_fp16.safetensors
+control_v11p_sd15s2_lineart_anime_fp16.safetensors,control_v11p_sd15s2_lineart_anime_fp16.safetensors
+control_v11f1e_sd15_tile.yaml,control_v11f1e_sd15_tile.yaml
+control_v11f1p_sd15_depth.yaml,control_v11f1p_sd15_depth.yaml
+control_v11p_sd15_lineart.yaml,control_v11p_sd15_lineart.yaml
+control_v11p_sd15_openpose.yaml,control_v11p_sd15_openpose.yaml
+control_v11p_sd15_inpaint.yaml,control_v11p_sd15_inpaint.yaml
+control_v11p_sd15_canny.yaml,control_v11p_sd15_canny.yaml
+control_v11e_sd15_ip2p.yaml,control_v11e_sd15_ip2p.yaml
+control_v11e_sd15_shuffle.yaml,control_v11e_sd15_shuffle.yaml
+control_v11p_sd15_mlsd.yaml,control_v11p_sd15_mlsd.yaml
+control_v11p_sd15_normalbae.yaml,control_v11p_sd15_normalbae.yaml
+control_v11p_sd15_scribble.yaml,control_v11p_sd15_scribble.yaml
+control_v11p_sd15_seg.yaml,control_v11p_sd15_seg.yaml
+control_v11p_sd15_softedge.yaml,control_v11p_sd15_softedge.yaml
+control_v11p_sd15s2_lineart_anime.yaml,control_v11p_sd15s2_lineart_anime.yaml"
+
+  cgdown "$1" "$data" "ControlNet-v1-1-diff" "controlnet"
+fi
+
+if [ "$1" == "controlnet_sd15_v1_1_lite" ]; then
   data="control_v11f1e_sd15_tile_fp16.safetensors,control_v11f1e_sd15_tile_fp16.safetensors
 control_v11f1p_sd15_depth_fp16.safetensors,control_v11f1p_sd15_depth_fp16.safetensors
 control_v11p_sd15_lineart_fp16.safetensors,control_v11p_sd15_lineart_fp16.safetensors
@@ -251,6 +284,15 @@ v2_lora_ZoomIn.ckpt,v2_lora_ZoomIn.ckpt
 v2_lora_ZoomOut.ckpt,v2_lora_ZoomOut.ckpt"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
+fi
+
+if [ "$1" == "wav2lip" ]; then
+  data="checkpoints/wav2lip.pth,wav2lip.pth
+checkpoints/wav2lip_gan.pth,wav2lip_gan.pth
+face_detection/detection/sfd/s3fd.pth,s3fd.pth
+predicator/shape_predictor_68_face_landmarks.dat,shape_predictor_68_face_landmarks.dat"
+
+  cgdown "$1" "$data" "StableDiffusion-others"
 fi
 
 cache_backup_dir="/root/cache"
