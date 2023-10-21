@@ -208,7 +208,8 @@ fi
 
 if [ "$1" == "Deforum" ]; then
   data="AdaBins_nyu.pt,AdaBins_nyu.pt
-dpt_large-midas-2f21e586.pt,dpt_large-midas-2f21e586.pt"
+dpt_large-midas-2f21e586.pt,dpt_large-midas-2f21e586.pt
+film_interpolation/film_net_fp16.pt,film_net_fp16.pt"
 
   cgdown "$1" "$data" "StableDiffusion-others"
 
