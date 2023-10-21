@@ -1,3 +1,9 @@
+- 2023-10-21 v4
+  - 更新 ControlNet 等插件
+  - 新增 tagcomplete、StyleSelectorXL 我觉得比较必要的插件
+  - 更新中英双语的插件
+  - 修复 SDXL 模型路径问题
+  - 优化了初始化脚本和启动脚本
 - 2023-09-01 v3
   - 更新 webui 到 v1.6.0
   - 更新 ControlNet 等插件
