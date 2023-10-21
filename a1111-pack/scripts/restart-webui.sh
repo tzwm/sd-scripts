@@ -2,6 +2,8 @@
 
 mkdir -p /root/autodl-tmp/webui_outputs
 mkdir -p /root/autodl-tmp/dreambooth
+mkdir -p /root/autodl-tmp/TensorRT/Unet-onnx
+mkdir -p /root/autodl-tmp/TensorRT/Unet-trt
 
 echo "重启中，需要等待几秒……"
 
