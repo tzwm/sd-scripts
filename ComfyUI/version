@@ -1,5 +1,6 @@
 - 20231023 v2.1 (v4)
   - 新增常用插件：Frame-Interpolation、Impact-Pack、Inspire-Pack、IPAdapter_plus、PromptStylers、Derfuu_ComfyUI_ModdedNodes、FreeU_Advanced、efficiency-nodes 和 was-node-suite
+  - 安装 xformers 加速
 - 20231017 v2.0 (v3)
   - Python 版本升到 3.10.8
   - 新增 AnimateDiff-Evolved、ControlNet、FizzNodes 等一系列插件
