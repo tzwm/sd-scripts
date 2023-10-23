@@ -269,8 +269,8 @@ mm_sd_v15_v2.ckpt,mm_sd_v15_v2.ckpt"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
 
-  #rm -r /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
-  #ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
+  rm -r /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
+  ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
 fi
 
 if [ "$1" == "animatediff_lora" ]; then
@@ -284,6 +284,7 @@ v2_lora_ZoomIn.ckpt,v2_lora_ZoomIn.ckpt
 v2_lora_ZoomOut.ckpt,v2_lora_ZoomOut.ckpt"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
+  ln -s $model_dir/$1 $model/lora/animatediff
 fi
 
 if [ "$1" == "wav2lip" ]; then
