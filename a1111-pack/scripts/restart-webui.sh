@@ -1,6 +1,7 @@
 #! /bin/bash
 
 mkdir -p /root/autodl-tmp/webui_outputs
+mkdir -p /root/autodl-tmp/webui_outputs/SadTalker
 mkdir -p /root/autodl-tmp/dreambooth
 mkdir -p /root/autodl-tmp/TensorRT/Unet-onnx
 mkdir -p /root/autodl-tmp/TensorRT/Unet-trt

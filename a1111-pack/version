@@ -1,3 +1,9 @@
+- 20231023 v7.1 (v18)
+  - 更新 AnimateDiff 插件到新版，支持 prompt travel 等功能
+  - 预置更多 AnimateDiff 相关模型，包括所有官方 LoRA 等
+  - 新增 FreeU、supermerger、LightDiffusionFlow 和 TensorRT 插件
+  - 所有预置插件更新升级
+  - 优化初始化和启动脚本
 - 20230910 v7.0 (v17)
   - 更新 webui 到 v1.6.0
   - 更新 ControlNet 到 v1.1.410，其他预置插件也更新到最新版本
