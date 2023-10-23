@@ -269,8 +269,11 @@ mm_sd_v15_v2.ckpt,mm_sd_v15_v2.ckpt"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
 
-  rm -r /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
-  ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-animatediff/model
+  webui_ext_dir="/root/stable-diffusion-webui/extensions/sd-webui-animatediff/model"
+  if [ -d $webui_ext_dir ]; then
+    rm -r $webui_ext_dir
+    ln -s $model_dir/$1 $webui_ext_dir
+  fi
 fi
 
 if [ "$1" == "animatediff_lora" ]; then
