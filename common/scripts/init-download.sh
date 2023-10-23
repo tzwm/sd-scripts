@@ -284,6 +284,8 @@ v2_lora_ZoomIn.ckpt,v2_lora_ZoomIn.ckpt
 v2_lora_ZoomOut.ckpt,v2_lora_ZoomOut.ckpt"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
+
+  rm $model_dir/lora/animatediff
   ln -s $model_dir/$1 $model_dir/lora/animatediff
 fi
 
