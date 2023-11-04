@@ -1,4 +1,4 @@
-rm /root/clash/config.yaml
+rm /root/calm/config.yaml
 
 cache_backup_dir="/root/cache"
 cache_dest_dir="/root/.cache"

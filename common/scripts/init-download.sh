@@ -290,7 +290,7 @@ v2_lora_ZoomOut.ckpt,v2_lora_ZoomOut.ckpt"
 
   animatediff_lora_target_path="$model_dir/lora/animatediff"
   if [ -d "$animatediff_lora_target_path" ]; then
-    rm $animatediff_lora_target_path
+    rm -r $animatediff_lora_target_path
     ln -s $model_dir/$1 $animatediff_lora_target_path
   fi
 fi

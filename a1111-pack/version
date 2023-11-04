@@ -57,7 +57,7 @@
   - 新增 Segment Anything + GroundingDINO，包含相关模型
   - 新增 tagger、a1111-sd-webui-lycoris、sd-webui-lora-block-weight、ultimate-upscale、all in one、deforum 这六个实用插件
   - 更新 controlnet，预置了所有预处理器包含新的 reference
-  - clash 更方便支持自定义 config、补了下佛山区的代理配置
+  - calm 更方便支持自定义 config、补了下佛山区的代理配置
   - 修复之前部分插件安装问题
 - 20230507 v3.0 (v5)
   - A1111 版本更新，升级 python, torch 等版本，换上 controlnet v1.1，一些细节优化
