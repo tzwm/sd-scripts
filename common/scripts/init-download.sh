@@ -75,8 +75,10 @@ sdxl_vae.safetensors,sdxl_vae.safetensors"
 fi
 
 if [ "$1" == "lora" ]; then
-  data="pensketch_lora_v2.3.safetensors,pensketch_lora_v2.3.safetensors,
-sd_xl_offset_example-lora_1.0.safetensors,sd_xl_offset_example-lora_1.0.safetensors"
+  data="pensketch_lora_v2.3.safetensors,pensketch_lora_v2.3.safetensors
+sd_xl_offset_example-lora_1.0.safetensors,sd_xl_offset_example-lora_1.0.safetensors
+lcm_lora_sd15.safetensors,lcm_lora_sd15.safetensors
+lcm_lora_sdxl.safetensors,lcm_lora_sdxl.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-LoRAs"
 fi
@@ -265,7 +267,8 @@ fi
 if [ "$1" == "animatediff_model" ]; then
   data="temporaldiff-v1-animatediff.ckpt,temporaldiff-v1-animatediff.ckpt
 hsxl_temporal_layers.f16.safetensors,hsxl_temporal_layers.f16.safetensors
-mm_sd_v15_v2.ckpt,mm_sd_v15_v2.ckpt"
+mm_sd_v15_v2.ckpt,mm_sd_v15_v2.ckpt
+mm_sdxl_v10_beta.ckpt,mm_sdxl_v10_beta.ckpt"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
 
