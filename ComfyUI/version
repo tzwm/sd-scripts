@@ -1,3 +1,8 @@
+- 20231117 v3.0 (v5)
+  - 更新 ComfyUI 和所有插件
+  - 预置所有 ControlNet 预处理器
+  - 新增 LCM LoRA
+  - 新增 AnimateDiff 相关节点和模型
 - 20231023 v2.1 (v4)
   - 新增常用插件：Frame-Interpolation、Impact-Pack、Inspire-Pack、IPAdapter_plus、PromptStylers、Derfuu_ComfyUI_ModdedNodes、FreeU_Advanced、efficiency-nodes 和 was-node-suite
   - 安装 xformers 加速
