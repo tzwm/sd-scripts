@@ -307,12 +307,40 @@ predicator/shape_predictor_68_face_landmarks.dat,shape_predictor_68_face_landmar
   cgdown "$1" "$data" "StableDiffusion-others"
 fi
 
+if [ "$1" == "lllyasviel_annotators" ]; then
+  data="150_16_swin_l_oneformer_coco_100ep.pth,150_16_swin_l_oneformer_coco_100ep.pth
+250_16_swin_l_oneformer_ade20k_160k.pth,250_16_swin_l_oneformer_ade20k_160k.pth
+ControlNetHED.pth,ControlNetHED.pth
+ControlNetLama.pth,ControlNetLama.pth
+RealESRGAN_x4plus.pth,RealESRGAN_x4plus.pth
+ZoeD_M12_N.pt,ZoeD_M12_N.pt
+body_pose_model.pth,body_pose_model.pth
+clip_g.pth,clip_g.pth
+dpt_hybrid-midas-501f0c75.pt,dpt_hybrid-midas-501f0c75.pt
+erika.pth,erika.pth
+facenet.pth,facenet.pth
+hand_pose_model.pth,hand_pose_model.pth
+lama.ckpt,lama.ckpt
+latest_net_G.pth,latest_net_G.pth
+mlsd_large_512_fp32.pth,mlsd_large_512_fp32.pth
+netG.pth,netG.pth
+network-bsds500.pth,network-bsds500.pth
+res101.pth,res101.pth
+scannet.pt,scannet.pt
+sk_model.pth,sk_model.pth
+sk_model2.pth,sk_model2.pth
+table5_pidinet.pth,table5_pidinet.pth
+upernet_global_small.pth,upernet_global_small.pth"
+
+  cgdown "$1" "$data" "annotators"
+fi
+
 cache_backup_dir="/root/cache"
 cache_dest_dir="/root/.cache"
 if [ "$1" == "cache" ] && [ -d $cache_backup_dir ]; then
   mkdir -p $cache_dest_dir
   mv $cache_backup_dir/huggingface $cache_dest_dir/huggingface
-  mv $cache_backup_dir/clip $cache_dest_dir/clip
+  mv $cache_backup_dir/clip $cache_dest_dir/clip 2> /dev/null
   mv $cache_backup_dir/torch $cache_dest_dir/torch 2> /dev/null
   rm -r $cache_backup_dir
 
