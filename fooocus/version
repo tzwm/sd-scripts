@@ -1,3 +1,7 @@
+- 20231118 v1.5 (v7)
+  - 升级到 Fooocus v2.1.821
+  - 预置 Fooocus 新的默认 checkpoint 和 inpaint 模型
+  - 支持 LCM 加速
 - 20231014 v1.4 (v6)
   - 升级到 Fooocus v2.1.60
   - 支持 anime 和 realistic preset，可以在启动的时候选择
