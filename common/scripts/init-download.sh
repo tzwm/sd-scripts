@@ -335,6 +335,15 @@ upernet_global_small.pth,upernet_global_small.pth"
   cgdown "$1" "$data" "annotators"
 fi
 
+if [ "$1" == "svd" ]; then
+  data="svd_xt-fp16.safetensors,svd_xt-fp16.safetensors"
+#svd-fp16.safetensors,svd-fp16.safetensors
+#svd.safetensors,svd.safetensors
+#svd_xt.safetensors,svd_xt.safetensors"
+
+  cgdown "$1" "$data" "stable-video-diffusion-img2vid"
+fi
+
 cache_backup_dir="/root/cache"
 cache_dest_dir="/root/.cache"
 if [ "$1" == "cache" ] && [ -d $cache_backup_dir ]; then
