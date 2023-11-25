@@ -341,7 +341,7 @@ if [ "$1" == "svd" ]; then
 #svd.safetensors,svd.safetensors
 #svd_xt.safetensors,svd_xt.safetensors"
 
-  cgdown "$1" "$data" "stable-video-diffusion-img2vid"
+  cgdown "$1" "$data" "stable-video-diffusion-img2vid" "checkpoint"
 fi
 
 cache_backup_dir="/root/cache"
