@@ -336,8 +336,8 @@ upernet_global_small.pth,upernet_global_small.pth"
 fi
 
 if [ "$1" == "svd" ]; then
-  data="svd_xt-fp16.safetensors,svd_xt-fp16.safetensors"
-#svd-fp16.safetensors,svd-fp16.safetensors
+  data="svd-fp16.safetensors,svd-fp16.safetensors"
+#svd_xt-fp16.safetensors,svd_xt-fp16.safetensors
 #svd.safetensors,svd.safetensors
 #svd_xt.safetensors,svd_xt.safetensors"
 
