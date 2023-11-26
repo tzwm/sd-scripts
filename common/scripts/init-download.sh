@@ -2,6 +2,9 @@
 
 model_dir="/root/autodl-tmp/models"
 
+sd_webui_dir="/root/stable-diffusion-webui"
+comfyui_dir="/root/ComfyUI"
+
 mkdir -p $model_dir
 cd $model_dir
 
@@ -237,10 +240,17 @@ sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth"
 
   cgdown "$1" "$data" "StableDiffusion-others"
 
-  if [ -e "/root/stable-diffusion-webui" ]; then
-    rm -r /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
-    ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+  if [ -e $sd_webui_dir ]; then
+    rm -r $sd_webui_dir/extensions/sd-webui-segment-anything/models
+    ln -s $model_dir/$1 $sd_webui_dir/extensions/sd-webui-segment-anything/models
   fi
+
+#  if [ -e $comfyui_dir ]; then
+    #rm -r $comfyui_dir/models/sam 2> /dev/null
+    #ln -s $model_dir/$1/sam $comfyui_dir/models/sam
+    #rm -r $comfyui_dir/models/grounding-dino 2> /dev/null
+    #ln -s $model_dir/$1/grounding-dino $comfyui_dir/models/grounding-dino
+  #fi
 fi
 
 if [ "$1" == "Deforum" ]; then
