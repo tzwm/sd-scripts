@@ -237,8 +237,10 @@ sam/sam_vit_h_4b8939.pth,sam_vit_h_4b8939.pth"
 
   cgdown "$1" "$data" "StableDiffusion-others"
 
-  rm -r /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
-  ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+  if [ -e "/root/stable-diffusion-webui" ]; then
+    rm -r /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+    ln -s $model_dir/$1 /root/stable-diffusion-webui/extensions/sd-webui-segment-anything/models
+  fi
 fi
 
 if [ "$1" == "Deforum" ]; then
