@@ -1,3 +1,10 @@
+- 20231128 v3.1 (v6)
+  - 更新 ComfyUI 和所有插件，支持 SVD
+  - 预置 SVD 模型
+  - 删除 FreeU 插件，和 SVD 有冲突
+  - 新增 Segment Anything、GroundingDINO、wd-v1-4-tags 和 KJNodes 等节点
+  - 修复 clip vision 模型问题
+  - 支持节点自动排布等功能
 - 20231117 v3.0 (v5)
   - 更新 ComfyUI 和所有插件
   - 预置所有 ControlNet 预处理器
