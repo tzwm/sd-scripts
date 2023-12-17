@@ -359,6 +359,14 @@ if [ "$1" == "svd" ]; then
   cgdown "$1" "$data" "stable-video-diffusion-img2vid" "checkpoint"
 fi
 
+if [ "$1" == "upscaler" ]; then
+  data="RealESRGAN_x2plus.pth,RealESRGAN_x2plus.pth
+RealESRGAN_x4plus.pth,RealESRGAN_x4plus.pth
+RealESRGAN_x4plus_anime_6B.pth,RealESRGAN_x4plus_anime_6B.pth"
+
+  cgdown "$1" "$data" "StableDiffusion-others"
+fi
+
 cache_backup_dir="/root/cache"
 cache_dest_dir="/root/.cache"
 if [ "$1" == "cache" ] && [ -d $cache_backup_dir ]; then
