@@ -1,3 +1,12 @@
+- 20231217 v4.0 (v7)
+  - 更新 ComfyUI 和所有插件
+  - 新增 comfyui-browser 插件，并预置三个工作流源，方便抄作业（包含我自己的测试工作流，是镜像打包前用来测试各种基本工作流是否正常的
+  - 新增 RealESRGAN 三个放大模型
+  - 新增 AnimateDiff v3 相关模型
+  - 新增 ip-adapter face 模型
+  - 新增 comfyui-portrait-master, smZNodes 和 prompt-control 插件
+  - 修复 clip_vision 模型问题，从 clip_g 改成了 clip_h
+  - LCM LoRA 替换为 rank1 优化版
 - 20231128 v3.1 (v6)
   - 更新 ComfyUI 和所有插件，支持 SVD
   - 预置 SVD 模型
