@@ -80,8 +80,8 @@ fi
 if [ "$1" == "lora" ]; then
   data="pensketch_lora_v2.3.safetensors,pensketch_lora_v2.3.safetensors
 sd_xl_offset_example-lora_1.0.safetensors,sd_xl_offset_example-lora_1.0.safetensors
-lcm_lora_sd15.safetensors,lcm_lora_sd15.safetensors
-lcm_lora_sdxl.safetensors,lcm_lora_sdxl.safetensors"
+sd15_lcm_lora_rank1.safetensors,sd15_lcm_lora_rank1.safetensors
+sdxl_LCM_lora_rank1.safetensors,sdxl_LCM_lora_rank1.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-LoRAs"
 fi
@@ -171,8 +171,8 @@ if [ "$1" == "controlnet_sd15_v1_1_400" ]; then
   data="ioclab_sd15_recolor.safetensors,ioclab_sd15_recolor.safetensors
 ip-adapter_sd15.pth,ip-adapter_sd15.pth
 ip-adapter_sd15_plus.pth,ip-adapter_sd15_plus.pth
-ip-adapter-full-face_sd15.bin,ip-adapter-full-face_sd15.bin
-ip-adapter-plus-face_sd15.bin,ip-adapter-plus-face_sd15.bin"
+ip-adapter-full-face_sd15.safetensors,ip-adapter-full-face_sd15.safetensors
+ip-adapter-plus-face_sd15.safetensors,ip-adapter-plus-face_sd15.safetensors"
 
   cgdown "$1" "$data" "ControlNet-SDXL" "controlnet"
 fi
