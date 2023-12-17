@@ -170,7 +170,9 @@ fi
 if [ "$1" == "controlnet_sd15_v1_1_400" ]; then
   data="ioclab_sd15_recolor.safetensors,ioclab_sd15_recolor.safetensors
 ip-adapter_sd15.pth,ip-adapter_sd15.pth
-ip-adapter_sd15_plus.pth,ip-adapter_sd15_plus.pth"
+ip-adapter_sd15_plus.pth,ip-adapter_sd15_plus.pth
+ip-adapter-full-face_sd15.bin,ip-adapter-full-face_sd15.bin
+ip-adapter-plus-face_sd15.bin,ip-adapter-plus-face_sd15.bin"
 
   cgdown "$1" "$data" "ControlNet-SDXL" "controlnet"
 fi
@@ -277,10 +279,10 @@ SadTalker_V0.0.2_512.safetensors,SadTalker_V0.0.2_512.safetensors"
 fi
 
 if [ "$1" == "animatediff_model" ]; then
-  data="temporaldiff-v1-animatediff.ckpt,temporaldiff-v1-animatediff.ckpt
-hsxl_temporal_layers.f16.safetensors,hsxl_temporal_layers.f16.safetensors
-mm_sd_v15_v2.ckpt,mm_sd_v15_v2.ckpt
-mm_sdxl_v10_beta.ckpt,mm_sdxl_v10_beta.ckpt"
+  data="mm_sd_v15_v2.ckpt,mm_sd_v15_v2.ckpt
+v3_sd15_mm.ckpt,v3_sd15_mm.ckpt
+v3_sd15_sparsectrl_rgb.ckpt,v3_sd15_sparsectrl_rgb.ckpt
+v3_sd15_sparsectrl_scribble.ckpt,v3_sd15_sparsectrl_scribble.ckpt"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
 
@@ -299,7 +301,8 @@ v2_lora_RollingClockwise.ckpt,v2_lora_RollingClockwise.ckpt
 v2_lora_TiltDown.ckpt,v2_lora_TiltDown.ckpt
 v2_lora_TiltUp.ckpt,v2_lora_TiltUp.ckpt
 v2_lora_ZoomIn.ckpt,v2_lora_ZoomIn.ckpt
-v2_lora_ZoomOut.ckpt,v2_lora_ZoomOut.ckpt"
+v2_lora_ZoomOut.ckpt,v2_lora_ZoomOut.ckpt
+v3_sd15_adapter.ckpt,v3_sd15_adapter.ckpt"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
 
