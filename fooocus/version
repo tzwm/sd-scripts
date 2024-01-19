@@ -1,3 +1,7 @@
+- 20240120 v1.6 (v8)
+  - 升级到 Fooocus v2.1.862
+  - 新增 clip_vision 相关模型
+  - 移除 sdxl_base 和 sdxl_refiner 模型，增加初始化速度
 - 20231118 v1.5 (v7)
   - 升级到 Fooocus v2.1.821
   - 新增汉化，来源于 [SimpleSDXL](https://github.com/metercai/SimpleSDXL)
