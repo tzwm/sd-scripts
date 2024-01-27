@@ -129,28 +129,28 @@ control_v11f1p_sd15_depth_fp16.safetensors,control_v11f1p_sd15_depth_fp16.safete
 control_v11p_sd15_lineart_fp16.safetensors,control_v11p_sd15_lineart_fp16.safetensors
 control_v11p_sd15_openpose_fp16.safetensors,control_v11p_sd15_openpose_fp16.safetensors
 control_v11p_sd15_inpaint_fp16.safetensors,control_v11p_sd15_inpaint_fp16.safetensors
+#control_v11p_sd15_seg_fp16.safetensors,control_v11p_sd15_seg_fp16.safetensors
 control_v11p_sd15_canny_fp16.safetensors,control_v11p_sd15_canny_fp16.safetensors
+#control_v11p_sd15_softedge_fp16.safetensors,control_v11p_sd15_softedge_fp16.safetensors
 control_v11f1e_sd15_tile.yaml,control_v11f1e_sd15_tile.yaml
 control_v11f1p_sd15_depth.yaml,control_v11f1p_sd15_depth.yaml
 control_v11p_sd15_lineart.yaml,control_v11p_sd15_lineart.yaml
 control_v11p_sd15_openpose.yaml,control_v11p_sd15_openpose.yaml
 control_v11p_sd15_inpaint.yaml,control_v11p_sd15_inpaint.yaml
+#control_v11p_sd15_seg.yaml,control_v11p_sd15_seg.yaml
+#control_v11p_sd15_softedge.yaml,control_v11p_sd15_softedge.yaml
 control_v11p_sd15_canny.yaml,control_v11p_sd15_canny.yaml"
 #control_v11e_sd15_ip2p_fp16.safetensors,control_v11e_sd15_ip2p_fp16.safetensors
 #control_v11e_sd15_shuffle_fp16.safetensors,control_v11e_sd15_shuffle_fp16.safetensors
 #control_v11p_sd15_mlsd_fp16.safetensors,control_v11p_sd15_mlsd_fp16.safetensors
 #control_v11p_sd15_normalbae_fp16.safetensors,control_v11p_sd15_normalbae_fp16.safetensors
 #control_v11p_sd15_scribble_fp16.safetensors,control_v11p_sd15_scribble_fp16.safetensors
-#control_v11p_sd15_seg_fp16.safetensors,control_v11p_sd15_seg_fp16.safetensors
-#control_v11p_sd15_softedge_fp16.safetensors,control_v11p_sd15_softedge_fp16.safetensors
 #control_v11p_sd15s2_lineart_anime_fp16.safetensors,control_v11p_sd15s2_lineart_anime_fp16.safetensors
 #control_v11e_sd15_ip2p.yaml,control_v11e_sd15_ip2p.yaml
 #control_v11e_sd15_shuffle.yaml,control_v11e_sd15_shuffle.yaml
 #control_v11p_sd15_mlsd.yaml,control_v11p_sd15_mlsd.yaml
 #control_v11p_sd15_normalbae.yaml,control_v11p_sd15_normalbae.yaml
 #control_v11p_sd15_scribble.yaml,control_v11p_sd15_scribble.yaml
-#control_v11p_sd15_seg.yaml,control_v11p_sd15_seg.yaml
-#control_v11p_sd15_softedge.yaml,control_v11p_sd15_softedge.yaml
 #control_v11p_sd15s2_lineart_anime.yaml,control_v11p_sd15s2_lineart_anime.yaml
 
   cgdown "$1" "$data" "ControlNet-v1-1-diff" "controlnet"
@@ -389,8 +389,8 @@ lora/ip-adapter-faceid_sdxl_lora.safetensors,ip-adapter-faceid_sdxl_lora.safeten
 fi
 
 if [ "$1" == "clip_vision" ]; then
-  data="clip_vision/clip_h.pth,clip_h.pth
-clip_vision/clip_g.pth,clip_g.pth"
+  data="clip_h.pth,clip_h.pth"
+#clip_g.pth,clip_g.pth
 
   cgdown "$1" "$data" "StableDiffusion-others"
 fi
