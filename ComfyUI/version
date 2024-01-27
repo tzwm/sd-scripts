@@ -1,3 +1,9 @@
+- 20240127 v4.1 (v8)
+  - 更新 ComfyUI 和所有插件
+  - 优化模型路径和预置模型，精简了写东西，腾出一些空间来（后面会发布模型下载插件，希望能更好解决这个问题
+  - 替换预置 ckpt 为 majicmixRealistic_v7 和 ghostmix_v20Bakedvae
+  - 新增插件 NNLatentUpscale、Advanced CLIP Text Encode 等
+  - 新增 IP-Adapter-FaceID 相关模型
 - 20231217 v4.0 (v7)
   - 更新 ComfyUI 和所有插件
   - 新增 comfyui-browser 插件，并预置三个工作流源，方便抄作业（包含我自己的测试工作流，是镜像打包前用来测试各种基本工作流是否正常的
