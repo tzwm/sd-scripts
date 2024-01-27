@@ -1,25 +1,33 @@
 #Rename this to extra_model_paths.yaml and ComfyUI will load it
 
-#config for a1111 ui
-#all you have to do is change the base_path to where yours is installed
-a111:
-    base_path: /root/autodl-tmp/
+tzwm:
+  base_path: /root/autodl-tmp/models
+  checkpoints: checkpoint
+  configs: checkpoint
+  vae: vae
+  loras: |
+    lora
+    ip_adapter_faceid/lora
+  upscale_models: upscaler
+  embeddings: embeddings
+  hypernetworks: embeddings
+  controlnet: controlnet
+  ipadapter: |
+    ip_adapter_faceid/models
+    ip_adapter
 
-    checkpoints: models/checkpoint
-    configs: models/checkpoint
-    vae: models/vae
-    loras: |
-         models/lora
-    upscale_models: |
-                  models/ESRGAN
-                  models/RealESRGAN
-                  models/SwinIR
-    embeddings: models/embeddings
-    hypernetworks: models/embeddings
-    controlnet: models/controlnet
-
-#other_ui:
-#    base_path: path/to/ui
-#    checkpoints: models/checkpoints
-#    gligen: models/gligen
-#    custom_nodes: path/custom_nodes
+fs:
+  base_path: /root/autodl-fs/models
+  checkpoints: checkpoint
+  configs: checkpoint
+  vae: vae
+  loras: |
+    lora
+    ip_adapter_faceid/lora
+  upscale_models: upscaler
+  embeddings: embeddings
+  hypernetworks: embeddings
+  controlnet: controlnet
+  ipadapter: |
+    ip_adapter_faceid/models
+    ip_adapter

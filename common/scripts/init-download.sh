@@ -46,8 +46,8 @@ function cgdown() {
 
 
 if [ "$1" == "checkpoint_sd15" ]; then
-  data="AnythingV5_v5PrtRE.safetensors,AnythingV5_v5PrtRE.safetensors
-majicmixRealistic_v6.safetensors,majicmixRealistic_v6.safetensors"
+  data="majicmixRealistic_v7.safetensors,majicmixRealistic_v7.safetensors
+ghostmix_v20Bakedvae.safetensors,ghostmix_v20Bakedvae.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-checkpoints" "checkpoint"
 
@@ -71,16 +71,13 @@ fi
 
 if [ "$1" == "vae" ]; then
   data="vae-ft-mse-840000-ema-pruned.safetensors,vae-ft-mse-840000-ema-pruned.safetensors
-anything-v4.0.vae.pt,anything-v4.0.vae.pt
-sdxl_vae.safetensors,sdxl_vae.safetensors"
+sdxl_vae_fp16_fix.safetensors,sdxl_vae_fp16_fix.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-VAE"
 fi
 
 if [ "$1" == "lora" ]; then
-  data="pensketch_lora_v2.3.safetensors,pensketch_lora_v2.3.safetensors
-sd_xl_offset_example-lora_1.0.safetensors,sd_xl_offset_example-lora_1.0.safetensors
-sd15_lcm_lora_rank1.safetensors,sd15_lcm_lora_rank1.safetensors
+  data="sd15_lcm_lora_rank1.safetensors,sd15_lcm_lora_rank1.safetensors
 sdxl_LCM_lora_rank1.safetensors,sdxl_LCM_lora_rank1.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-LoRAs"
@@ -179,8 +176,7 @@ fi
 
 #controlnet sdxl
 if [ "$1" == "controlnet_sdxl_v1_1_400" ]; then
-  data="ip-adapter_xl.pth,ip-adapter_xl.pth
-sai_xl_canny_256lora.safetensors,sai_xl_canny_256lora.safetensors
+  data="sai_xl_canny_256lora.safetensors,sai_xl_canny_256lora.safetensors
 sai_xl_depth_256lora.safetensors,sai_xl_depth_256lora.safetensors
 sai_xl_recolor_256lora.safetensors,sai_xl_recolor_256lora.safetensors
 sai_xl_sketch_256lora.safetensors,sai_xl_sketch_256lora.safetensors
@@ -363,6 +359,38 @@ if [ "$1" == "upscaler" ]; then
   data="RealESRGAN_x2plus.pth,RealESRGAN_x2plus.pth
 RealESRGAN_x4plus.pth,RealESRGAN_x4plus.pth
 RealESRGAN_x4plus_anime_6B.pth,RealESRGAN_x4plus_anime_6B.pth"
+
+  cgdown "$1" "$data" "StableDiffusion-others"
+fi
+
+if [ "$1" == "ip_adapter" ]; then
+  data="ip-adapter_sd15.safetensors,ip-adapter_sd15.safetensors
+ip-adapter-plus-face_sd15.safetensors,ip-adapter-plus-face_sd15.safetensors
+ip-adapter-plus_sd15.safetensors,ip-adapter-plus_sd15.safetensors
+ip-adapter-plus_sdxl_vit-h.safetensors,ip-adapter-plus_sdxl_vit-h.safetensors
+"
+
+  cgdown "$1" "$data" "IP-Adapter_tzwm"
+fi
+
+if [ "$1" == "ip_adapter_faceid" ]; then
+  data="models/ip-adapter-faceid-plusv2_sd15.bin,ip-adapter-faceid-plusv2_sd15.bin
+models/ip-adapter-faceid-plusv2_sdxl.bin,ip-adapter-faceid-plusv2_sdxl.bin
+models/ip-adapter-faceid-portrait_sd15.bin,ip-adapter-faceid-portrait_sd15.bin
+lora/ip-adapter-faceid-plusv2_sd15_lora.safetensors,ip-adapter-faceid-plusv2_sd15_lora.safetensors
+lora/ip-adapter-faceid-plusv2_sdxl_lora.safetensors,ip-adapter-faceid-plusv2_sdxl_lora.safetensors
+lora/ip-adapter-faceid-plus_sd15_lora.safetensors,ip-adapter-faceid-plus_sd15_lora.safetensors
+lora/ip-adapter-faceid_sd15_lora.safetensors,ip-adapter-faceid_sd15_lora.safetensors
+lora/ip-adapter-faceid_sdxl_lora.safetensors,ip-adapter-faceid_sdxl_lora.safetensors"
+#models/ip-adapter-faceid_sd15.bin,ip-adapter-faceid_sd15.bin
+#models/imodels/ip-adapter-faceid-plus_sd15.bin,ip-adapter-faceid-plus_sd15.binp-adapter-faceid_sdxl.bin,ip-adapter-faceid_sdxl.bin
+
+  cgdown "$1" "$data" "IP-Adapter-FaceID_tzwm"
+fi
+
+if [ "$1" == "clip_vision" ]; then
+  data="clip_vision/clip_h.pth,clip_h.pth
+clip_vision/clip_g.pth,clip_g.pth"
 
   cgdown "$1" "$data" "StableDiffusion-others"
 fi
