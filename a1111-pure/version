@@ -1,3 +1,7 @@
+- 2024-01-28 v5
+  - 更新 webui 本体和所有插件
+  - 新增 IP Adapter FaceID 相关模型
+  - 调整了一下预置的模型，换了 checkpoint，优化了 VAE，精简了 ControlNet
 - 2023-10-21 v4
   - 更新 ControlNet 等插件
   - 新增 tagcomplete、StyleSelectorXL 我觉得比较必要的插件
