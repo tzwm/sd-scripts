@@ -218,11 +218,11 @@ mlsd/mlsd_large_512_fp32.pth,mlsd_large_512_fp32.pth
 normal_bae/scannet.pt,scannet.pt
 pidinet/table5_pidinet.pth,table5_pidinet.pth
 oneformer/250_16_swin_l_oneformer_ade20k_160k.pth,250_16_swin_l_oneformer_ade20k_160k.pth
-oneformer/150_16_swin_l_oneformer_coco_100ep.pth,150_16_swin_l_oneformer_coco_100ep.pth
 lama/ControlNetLama.pth,ControlNetLama.pth
 uniformer/upernet_global_small.pth,upernet_global_small.pth
-clip_vision/clip_h.pth,clip_h.pth
-clip_vision/clip_g.pth,clip_g.pth"
+clip_vision/clip_h.pth,clip_h.pth"
+#oneformer/150_16_swin_l_oneformer_coco_100ep.pth,150_16_swin_l_oneformer_coco_100ep.pth
+#clip_vision/clip_g.pth,clip_g.pth"
 #clip_vision/clip_vitl.pth,clip_vitl.pth"
 
   cgdown "$1" "$data" "StableDiffusion-others"
@@ -370,7 +370,11 @@ ip-adapter-plus_sd15.safetensors,ip-adapter-plus_sd15.safetensors
 ip-adapter-plus_sdxl_vit-h.safetensors,ip-adapter-plus_sdxl_vit-h.safetensors
 "
 
-  cgdown "$1" "$data" "IP-Adapter_tzwm"
+  if [ -e $sd_webui_dir ]; then
+    cgdown "$1" "$data" "IP-Adapter_tzwm" "controlnet"
+  else
+    cgdown "$1" "$data" "IP-Adapter_tzwm"
+  fi
 fi
 
 if [ "$1" == "ip_adapter_faceid" ]; then
@@ -386,6 +390,26 @@ lora/ip-adapter-faceid_sdxl_lora.safetensors,ip-adapter-faceid_sdxl_lora.safeten
 #models/imodels/ip-adapter-faceid-plus_sd15.bin,ip-adapter-faceid-plus_sd15.binp-adapter-faceid_sdxl.bin,ip-adapter-faceid_sdxl.bin
 
   cgdown "$1" "$data" "IP-Adapter-FaceID_tzwm"
+fi
+
+if [ "$1" == "ip_adapter_faceid_models" ]; then
+  data="ip-adapter-faceid-plusv2_sd15.bin,ip-adapter-faceid-plusv2_sd15.bin
+ip-adapter-faceid-plusv2_sdxl.bin,ip-adapter-faceid-plusv2_sdxl.bin
+ip-adapter-faceid-portrait_sd15.bin,ip-adapter-faceid-portrait_sd15.bin"
+#models/ip-adapter-faceid_sd15.bin,ip-adapter-faceid_sd15.bin
+#models/imodels/ip-adapter-faceid-plus_sd15.bin,ip-adapter-faceid-plus_sd15.binp-adapter-faceid_sdxl.bin,ip-adapter-faceid_sdxl.bin
+
+  cgdown "$1" "$data" "IP-Adapter-FaceID_tzwm" "controlnet"
+fi
+
+if [ "$1" == "ip_adapter_faceid_lora" ]; then
+  data="ip-adapter-faceid-plusv2_sd15_lora.safetensors,ip-adapter-faceid-plusv2_sd15_lora.safetensors
+ip-adapter-faceid-plusv2_sdxl_lora.safetensors,ip-adapter-faceid-plusv2_sdxl_lora.safetensors
+ip-adapter-faceid-plus_sd15_lora.safetensors,ip-adapter-faceid-plus_sd15_lora.safetensors
+ip-adapter-faceid_sd15_lora.safetensors,ip-adapter-faceid_sd15_lora.safetensors
+ip-adapter-faceid_sdxl_lora.safetensors,ip-adapter-faceid_sdxl_lora.safetensors"
+
+  cgdown "$1" "$data" "IP-Adapter-FaceID_tzwm" "lora"
 fi
 
 if [ "$1" == "clip_vision" ]; then
