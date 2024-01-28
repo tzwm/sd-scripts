@@ -1,6 +1,6 @@
 #! /bin/bash
 
-model_dir="/root/autodl-tmp/"
+model_dir="/root/autodl-tmp"
 
 cd $model_dir
 
