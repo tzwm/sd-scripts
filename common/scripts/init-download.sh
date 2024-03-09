@@ -420,10 +420,10 @@ fi
 
 if [ "$1" == "instantid" ]; then
   data="ip-adapter.bin,ip-adapter.bin"
-  cgdown "$1" "$data" "tzwm/ComfyUI_InstantID"
+  cgdown "$1" "$data" "ComfyUI_InstantID"
 
   data="instantid/diffusion_pytorch_model.safetensors,diffusion_pytorch_model.safetensors"
-  cgdown "$1" "$data" "tzwm/ComfyUI_InstantID" "controlnet"
+  cgdown "$1" "$data" "ComfyUI_InstantID" "controlnet"
 fi
 
 
