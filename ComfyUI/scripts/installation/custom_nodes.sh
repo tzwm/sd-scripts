@@ -8,14 +8,8 @@ if [ ! -e $custom_nodes_list ]; then
   exit 1
 fi
 
-# Install yq if not already installed
-if ! command -v yq &> /dev/null; then
-    echo "yq not found."
-    exit 1
-fi
-
 # Parse the YAML and get the string array
-custom_nodes_url=$(yq e '.custom_nodes | .[]' $custom_nodes_list)
+custom_nodes_url=$(cat $custom_nodes_list)
 
 cd $comfyui_dir/custom_nodes
 # Loop through the array and print each value
