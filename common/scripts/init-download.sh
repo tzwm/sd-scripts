@@ -58,8 +58,7 @@ ghostmix_v20Bakedvae.safetensors,ghostmix_v20Bakedvae.safetensors"
 fi
 
 if [ "$1" == "checkpoint_sdxl" ]; then
-  data="sd_xl_base_1.0.safetensors,sd_xl_base_1.0.safetensors
-sd_xl_refiner_1.0.safetensors,sd_xl_refiner_1.0.safetensors"
+  data="juggernautXL_v9Rundiffusionphoto2.safetensors,juggernautXL_v9Rundiffusionphoto2.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-checkpoints" "checkpoint"
 
@@ -418,6 +417,15 @@ if [ "$1" == "clip_vision" ]; then
 
   cgdown "$1" "$data" "StableDiffusion-others"
 fi
+
+if [ "$1" == "instantid" ]; then
+  data="ip-adapter.bin,ip-adapter.bin"
+  cgdown "$1" "$data" "tzwm/ComfyUI_InstantID"
+
+  data="instantid/diffusion_pytorch_model.safetensors,diffusion_pytorch_model.safetensors"
+  cgdown "$1" "$data" "tzwm/ComfyUI_InstantID" "controlnet"
+fi
+
 
 cache_backup_dir="/root/cache"
 cache_dest_dir="/root/.cache"
