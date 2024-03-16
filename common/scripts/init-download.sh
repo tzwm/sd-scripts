@@ -1,9 +1,13 @@
 #! /bin/bash
 
 model_dir="/root/autodl-tmp/models"
+if [ -n $tzwm_data_dir ]; then
+  model_dir="$tzwm_data_dir/models"
+fi
+echo "models directory: $model_dir"
 
-sd_webui_dir="/root/stable-diffusion-webui"
-comfyui_dir="/root/ComfyUI"
+sd_webui_dir="$HOME/stable-diffusion-webui"
+comfyui_dir="$HOME/ComfyUI"
 
 mkdir -p $model_dir
 cd $model_dir

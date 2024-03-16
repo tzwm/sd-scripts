@@ -1,0 +1,33 @@
+#Rename this to extra_model_paths.yaml and ComfyUI will load it
+
+local:
+  base_path: /home/tom/fssd/models
+  checkpoints: checkpoint
+  configs: checkpoint
+  vae: vae
+  loras: |
+    lora
+    ip_adapter_faceid/lora
+  upscale_models: upscaler
+  embeddings: embeddings
+  hypernetworks: embeddings
+  controlnet: controlnet
+  ipadapter: |
+    ip_adapter_faceid/models
+    ip_adapter
+
+nas:
+  base_path: /home/tom/fsas/models
+  checkpoints: checkpoint
+  configs: checkpoint
+  vae: vae
+  loras: |
+    lora
+    ip_adapter_faceid/lora
+  upscale_models: upscaler
+  embeddings: embeddings
+  hypernetworks: embeddings
+  controlnet: controlnet
+  ipadapter: |
+    ip_adapter_faceid/models
+    ip_adapter
