@@ -1,0 +1,47 @@
+- 20240315 v4.2 (v9)
+  - 支持 casdao 平台
+- 20240309 v4.2 (v9)
+  - 新增 InstantID 和 LayerdDiffusion 相关插件和模型
+  - 新增一个 SDXL 的模型方便测试 XL 生态，预置的是 [juggernaut-xl](https://civitai.com/models/133005/juggernaut-xl)
+  - 修了下 ComfyUI 目录下跟 commit 不一致的文件，减少 diff files，尽量能直接自助升级
+- 20240127 v4.1 (v8)
+  - 更新 ComfyUI 和所有插件
+  - 优化模型路径和预置模型，精简了写东西，腾出一些空间来（后面会发布模型下载插件，希望能更好解决这个问题
+  - 替换预置 ckpt 为 majicmixRealistic_v7 和 ghostmix_v20Bakedvae
+  - 新增插件 NNLatentUpscale、Advanced CLIP Text Encode 等
+  - 新增 IP-Adapter-FaceID 相关模型
+- 20231217 v4.0 (v7)
+  - 更新 ComfyUI 和所有插件
+  - 新增 comfyui-browser 插件，并预置三个工作流源，方便抄作业（包含我自己的测试工作流，是镜像打包前用来测试各种基本工作流是否正常的
+  - 新增 RealESRGAN 三个放大模型
+  - 新增 AnimateDiff v3 相关模型
+  - 新增 ip-adapter face 模型
+  - 新增 comfyui-portrait-master, smZNodes 和 prompt-control 插件
+  - 修复 clip_vision 模型问题，从 clip_g 改成了 clip_h
+  - LCM LoRA 替换为 rank1 优化版
+- 20231128 v3.1 (v6)
+  - 更新 ComfyUI 和所有插件，支持 SVD
+  - 预置 SVD 模型
+  - 删除 FreeU 插件，和 SVD 有冲突
+  - 新增 Segment Anything、GroundingDINO、wd-v1-4-tags 和 KJNodes 等节点
+  - 修复 clip vision 模型问题
+  - 支持节点自动排布等功能
+- 20231117 v3.0 (v5)
+  - 更新 ComfyUI 和所有插件
+  - 预置所有 ControlNet 预处理器
+  - 新增 LCM LoRA
+  - 新增 AnimateDiff 相关节点和模型
+- 20231023 v2.1 (v4)
+  - 新增常用插件：Frame-Interpolation、Impact-Pack、Inspire-Pack、IPAdapter_plus、PromptStylers、Derfuu_ComfyUI_ModdedNodes、FreeU_Advanced、efficiency-nodes 和 was-node-suite
+  - 安装 xformers 加速
+- 20231017 v2.0 (v3)
+  - Python 版本升到 3.10.8
+  - 新增 AnimateDiff-Evolved、ControlNet、FizzNodes 等一系列插件
+  - 增加 AnimateDiff 相关 motion 和 lora 模型
+  - 新增 AIGODLIKE-ComfyUI-Translation 插件，默认开启汉化版 ComfyUI
+- 20230903 v1.1 (v2)
+  - 增加 ComfyUI-Manager 插件管理器
+  - 调整模型路径和初始化脚本
+  - 调整启动参数以支持 CG 本地使用
+- 20230729 v1.0 (v1)
+  - 基本功能搞定，支持 SDXL
