@@ -1,23 +1,28 @@
 #!/bin/bash
 
 custom_nodes_list=$1
-comfyui_dir="~/ComfyUI"
+comfyui_dir="$HOME/ComfyUI"
 
-if [ ! -e $custom_nodes_list ]; then
+if [ ! -f $custom_nodes_list ]; then
   echo "not found this list config: $custom_nodes_list"
   exit 1
 fi
 
-# Parse the YAML and get the string array
-custom_nodes_url=$(cat $custom_nodes_list)
 
 cd $comfyui_dir/custom_nodes
-# Loop through the array and print each value
-for url in $custom_nodes_url; do
-  echo "installing $url"
 
-  git clone --depth 1 $url
-done
+# Read the text file line by line
+while IFS= read -r url; do
+    # Clone the repository
+    git clone "$url"
+
+    # Check if the clone was successful
+    if [ $? -eq 0 ]; then
+        echo "Repository cloned successfully: $url"
+    else
+        echo "Failed to clone repository: $url"
+    fi
+done < "$FILE_PATH"
 
 for folder in */; do
   if [ -e "$folder/requirements.txt" ]; then
