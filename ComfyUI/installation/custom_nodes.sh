@@ -14,7 +14,7 @@ cd $comfyui_dir/custom_nodes
 # Read the text file line by line
 while IFS= read -r url; do
     # Clone the repository
-    git clone "$url"
+    git clone --depth 1 "$url"
 
     # Check if the clone was successful
     if [ $? -eq 0 ]; then
@@ -22,7 +22,7 @@ while IFS= read -r url; do
     else
         echo "Failed to clone repository: $url"
     fi
-done < "$FILE_PATH"
+done < "$custom_nodes_list"
 
 for folder in */; do
   if [ -e "$folder/requirements.txt" ]; then
