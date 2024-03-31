@@ -15,6 +15,7 @@ tzwm:
   ipadapter: |
     ip_adapter_faceid/models
     ip_adapter
+  clip_vision: clip_vision
 
 fs:
   base_path: /root/autodl-fs/models
@@ -31,3 +32,4 @@ fs:
   ipadapter: |
     ip_adapter_faceid/models
     ip_adapter
+  clip_vision: clip_vision
