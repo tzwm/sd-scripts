@@ -1,5 +1,21 @@
 #Rename this to extra_model_paths.yaml and ComfyUI will load it
 
+fshare:
+  base_path: /home/tom/fshare/models/tzwm/sd-models/
+  checkpoints: checkpoint
+  configs: checkpoint
+  vae: vae
+  loras: |
+    lora
+    ip_adapter_faceid/lora
+  upscale_models: upscaler
+  embeddings: embeddings
+  hypernetworks: embeddings
+  controlnet: controlnet
+  ipadapter: |
+    ip_adapter_faceid/models
+    ip_adapter
+
 local:
   base_path: /home/tom/fssd/models
   checkpoints: checkpoint
