@@ -427,6 +427,10 @@ if [ "$1" == "instantid" ]; then
   cgdown "$1" "$data" "ComfyUI_InstantID" "controlnet"
 fi
 
+#if [ "$1" == "layerdiffusion" ]; then
+  #data="layer_xl_bg2ble.safetensors,layer_xl_bg2ble.safetensors"
+  #cgdown "$1" "$data" "tzwm/layerdiffusion"
+#fi
 
 cache_backup_dir="/root/cache"
 cache_dest_dir="/root/.cache"
