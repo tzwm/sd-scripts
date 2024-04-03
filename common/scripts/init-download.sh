@@ -50,8 +50,7 @@ function cgdown() {
 
 
 if [ "$1" == "checkpoint_sd15" ]; then
-  data="majicmixRealistic_v7.safetensors,majicmixRealistic_v7.safetensors
-ghostmix_v20Bakedvae.safetensors,ghostmix_v20Bakedvae.safetensors"
+  data="majicmixRealistic_v7.safetensors,majicmixRealistic_v7.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-checkpoints" "checkpoint"
 
@@ -81,7 +80,9 @@ fi
 
 if [ "$1" == "lora" ]; then
   data="sd15_lcm_lora_rank1.safetensors,sd15_lcm_lora_rank1.safetensors
-sdxl_LCM_lora_rank1.safetensors,sdxl_LCM_lora_rank1.safetensors"
+sdxl_LCM_lora_rank1.safetensors,sdxl_LCM_lora_rank1.safetensors
+sdxl_lightning_4step_lora.safetensors,sdxl_lightning_4step_lora.safetensors
+sdxl_lightning_8step_lora.safetensors,sdxl_lightning_8step_lora.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-LoRAs"
 fi
