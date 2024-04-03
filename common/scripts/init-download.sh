@@ -1,10 +1,6 @@
 #! /bin/bash
 
 model_dir="/root/autodl-tmp/models"
-if [ -n $tzwm_data_dir ]; then
-  model_dir="$tzwm_data_dir/models"
-fi
-echo "models directory: $model_dir"
 
 sd_webui_dir="$HOME/stable-diffusion-webui"
 comfyui_dir="$HOME/ComfyUI"
