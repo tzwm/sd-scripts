@@ -4,7 +4,7 @@ echo "启动中……"
 
 output_dir="/root/autodl-tmp/output"
 if [ ! -d $output_dir ]; then
-  ln -s /root/ComfyUI/output output_dir
+  ln -s /root/ComfyUI/output $output_dir
 fi
 
 cd /root/ComfyUI
