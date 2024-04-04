@@ -28,3 +28,6 @@ https://github.com/Kosinkadink/ComfyUI-AnimateDiff-Evolved
 https://github.com/Kosinkadink/ComfyUI-Advanced-ControlNet
 https://github.com/cubiq/ComfyUI_InstantID
 https://github.com/huchenlei/ComfyUI-layerdiffusion
+https://github.com/Extraltodeus/ComfyUI-AutomaticCFG
+https://github.com/mav-rik/facerestore_cf
+https://github.com/theUpsider/ComfyUI-Logic
