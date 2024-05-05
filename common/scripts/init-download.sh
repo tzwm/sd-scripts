@@ -78,7 +78,9 @@ if [ "$1" == "lora" ]; then
   data="sd15_lcm_lora_rank1.safetensors,sd15_lcm_lora_rank1.safetensors
 sdxl_LCM_lora_rank1.safetensors,sdxl_LCM_lora_rank1.safetensors
 sdxl_lightning_4step_lora.safetensors,sdxl_lightning_4step_lora.safetensors
-sdxl_lightning_8step_lora.safetensors,sdxl_lightning_8step_lora.safetensors"
+sdxl_lightning_8step_lora.safetensors,sdxl_lightning_8step_lora.safetensors
+Hyper-SDXL-8steps-CFG-lora.safetensors,Hyper-SDXL-8steps-CFG-lora.safetensors
+Hyper-SD15-8steps-CFG-lora.safetensors,Hyper-SD15-8steps-CFG-lora.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-LoRAs"
 fi
@@ -368,7 +370,7 @@ if [ "$1" == "ip_adapter" ]; then
 ip-adapter-plus-face_sd15.safetensors,ip-adapter-plus-face_sd15.safetensors
 ip-adapter-plus_sd15.safetensors,ip-adapter-plus_sd15.safetensors
 ip-adapter-plus_sdxl_vit-h.safetensors,ip-adapter-plus_sdxl_vit-h.safetensors
-"
+ip-adapter_pulid_sdxl_fp16.safetensors,ip-adapter_pulid_sdxl_fp16.safetensors"
 
   if [ -e $sd_webui_dir ]; then
     cgdown "$1" "$data" "IP-Adapter_tzwm" "controlnet"
