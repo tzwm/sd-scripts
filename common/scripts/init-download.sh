@@ -222,7 +222,12 @@ pidinet/table5_pidinet.pth,table5_pidinet.pth
 oneformer/250_16_swin_l_oneformer_ade20k_160k.pth,250_16_swin_l_oneformer_ade20k_160k.pth
 lama/ControlNetLama.pth,ControlNetLama.pth
 uniformer/upernet_global_small.pth,upernet_global_small.pth
-clip_vision/clip_h.pth,clip_h.pth"
+clip_vision/clip_h.pth,clip_h.pth
+insightface/models/antelopev2/1k3d68.onnx,1k3d68.onnx
+insightface/models/antelopev2/2d106det.onnx,2d106det.onnx
+insightface/models/antelopev2/genderage.onnx,genderage.onnx
+insightface/models/antelopev2/glintr100.onnx,glintr100.onnx
+insightface/models/antelopev2/scrfd_10g_bnkps.onnx,scrfd_10g_bnkps.onnx"
 #oneformer/150_16_swin_l_oneformer_coco_100ep.pth,150_16_swin_l_oneformer_coco_100ep.pth
 #clip_vision/clip_g.pth,clip_g.pth"
 #clip_vision/clip_vitl.pth,clip_vitl.pth"
