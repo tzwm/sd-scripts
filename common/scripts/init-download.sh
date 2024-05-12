@@ -271,8 +271,8 @@ SadTalker_V0.0.2_512.safetensors,SadTalker_V0.0.2_512.safetensors"
 fi
 
 if [ "$1" == "animatediff_model" ]; then
-  data="mm_sd_v15_v2.ckpt,mm_sd_v15_v2.ckpt
-v3_sd15_mm.ckpt,v3_sd15_mm.ckpt"
+  data="mm_sd15_v2.safetensors,mm_sd15_v2.safetensors
+mm_sd15_v3.safetensors,mm_sd15_v3.safetensors"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
 
