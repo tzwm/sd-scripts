@@ -177,20 +177,9 @@ ip-adapter-plus-face_sd15.safetensors,ip-adapter-plus-face_sd15.safetensors"
 fi
 
 #controlnet sdxl
-if [ "$1" == "controlnet_sdxl_v1_1_400" ]; then
-  data="sai_xl_canny_256lora.safetensors,sai_xl_canny_256lora.safetensors
-sai_xl_depth_256lora.safetensors,sai_xl_depth_256lora.safetensors
-sai_xl_recolor_256lora.safetensors,sai_xl_recolor_256lora.safetensors
-sai_xl_sketch_256lora.safetensors,sai_xl_sketch_256lora.safetensors
-kohya_controllllite_xl_blur.safetensors,kohya_controllllite_xl_blur.safetensors
-kohya_controllllite_xl_blur_anime.safetensors,kohya_controllllite_xl_blur_anime.safetensors
-kohya_controllllite_xl_scribble_anime.safetensors,kohya_controllllite_xl_scribble_anime.safetensors
-t2i-adapter_diffusers_xl_canny.safetensors,t2i-adapter_diffusers_xl_canny.safetensors
-t2i-adapter_diffusers_xl_depth_midas.safetensors,t2i-adapter_diffusers_xl_depth_midas.safetensors
-t2i-adapter_diffusers_xl_depth_zoe.safetensors,t2i-adapter_diffusers_xl_depth_zoe.safetensors
-t2i-adapter_diffusers_xl_lineart.safetensors,t2i-adapter_diffusers_xl_lineart.safetensors
-t2i-adapter_diffusers_xl_sketch.safetensors,t2i-adapter_diffusers_xl_sketch.safetensors
-t2i-adapter_diffusers_xl_openpose.safetensors,t2i-adapter_diffusers_xl_openpose.safetensors"
+if [ "$1" == "controlnet_sdxl" ]; then
+  data="ttplanetSDXLControlnet_v20Fp16.safetensors,ttplanetSDXLControlnet_v20Fp16.safetensors
+mistoLine_rank256.safetensors,mistoLine_rank256.safetensors"
 
   cgdown "$1" "$data" "ControlNet-SDXL" "controlnet"
 fi
@@ -283,9 +272,7 @@ fi
 
 if [ "$1" == "animatediff_model" ]; then
   data="mm_sd_v15_v2.ckpt,mm_sd_v15_v2.ckpt
-v3_sd15_mm.ckpt,v3_sd15_mm.ckpt
-v3_sd15_sparsectrl_rgb.ckpt,v3_sd15_sparsectrl_rgb.ckpt
-v3_sd15_sparsectrl_scribble.ckpt,v3_sd15_sparsectrl_scribble.ckpt"
+v3_sd15_mm.ckpt,v3_sd15_mm.ckpt"
 
   cgdown "$1" "$data" "AnimateDiff-Models"
 
@@ -372,9 +359,10 @@ fi
 
 if [ "$1" == "ip_adapter" ]; then
   data="ip-adapter_sd15.safetensors,ip-adapter_sd15.safetensors
-ip-adapter-plus-face_sd15.safetensors,ip-adapter-plus-face_sd15.safetensors
 ip-adapter-plus_sd15.safetensors,ip-adapter-plus_sd15.safetensors
+ip-adapter-plus-face_sd15.safetensors,ip-adapter-plus-face_sd15.safetensors
 ip-adapter-plus_sdxl_vit-h.safetensors,ip-adapter-plus_sdxl_vit-h.safetensors
+ip-adapter-plus-face_sdxl_vit-h.safetensors,ip-adapter-plus-face_sdxl_vit-h.safetensors
 ip-adapter_pulid_sdxl_fp16.safetensors,ip-adapter_pulid_sdxl_fp16.safetensors"
 
   if [ -e $sd_webui_dir ]; then
