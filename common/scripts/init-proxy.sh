@@ -2,8 +2,8 @@
 
 source /etc/network_turbo
 
-git config --global http.proxy $http_proxy
-echo 'git 配置好了'
+#git config --global http.proxy $http_proxy
+#echo 'git 配置好了'
 
 if [ "$1" = "global" ]; then
   echo '开启全局配置'
