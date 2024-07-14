@@ -427,6 +427,13 @@ fi
   #cgdown "$1" "$data" "tzwm/layerdiffusion"
 #fi
 
+if [ "$1" == "ollama" ]; then
+  data="sha256-43f7a214e5329f672bb05404cfba1913cbb70fdaa1a17497224e1925046b0ed5,sha256-43f7a214e5329f672bb05404cfba1913cbb70fdaa1a17497224e1925046b0ed5"
+
+  cgdown "$1" "$data" "ollama"
+fi
+
+
 cache_backup_dir="/root/cache"
 cache_dest_dir="/root/.cache"
 if [ "$1" == "cache" ] && [ -d $cache_backup_dir ]; then
