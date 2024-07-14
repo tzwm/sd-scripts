@@ -10,4 +10,5 @@ fi
 cd /root/ComfyUI
 
 source /root/tzwm-autodl/common/scripts/init-proxy.sh && \
+HF_ENDPOINT=https://hf-mirror.com \
 python main.py --port 6006 --listen 0.0.0.0
