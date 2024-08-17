@@ -8,7 +8,7 @@ if [ ! -d $output_dir ]; then
 fi
 
 echo "ollama 启动"
-nohup ollama serve &
+ollama serve &
 
 cd /root/ComfyUI
 
