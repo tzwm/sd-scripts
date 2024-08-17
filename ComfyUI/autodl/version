@@ -1,3 +1,9 @@
+- 20240714 v5.0 (v10)
+  - 升级 ComfyUI 本体和所有插件到最新，支持 FLUX、SD3、混元等
+  - 新增 ollama 环境和相关 ComfyUI 插件，预置 qwen2-7b int4 的基础模型
+  - 调整一些预置模型，腾挪空间
+  - 使用 hf-mirror 取代 autodl 学术加速，相较而言速度没那么快但稳定一些
+  - 新增 Dev-Utils、Easy-Use、KJNodes、AdvancedLivePortrait、Logic 等插件
 - 20240403 v4.2 (v9)
   - 支持在 ComfyUI Manager 中自助更新本体，为此付出的代价是，后续 outputs 输出文件都是存在系统盘的，换实例记得备份
   - 更新本体和所有插件。IPAdapter v2 非常好用，安利一下，但之前的老的工作流无法使用
