@@ -7,6 +7,9 @@ if [ ! -d $output_dir ]; then
   ln -s /root/ComfyUI/output $output_dir
 fi
 
+echo "ollama 启动"
+nohup ollama serve &
+
 cd /root/ComfyUI
 
 source /root/tzwm-autodl/common/scripts/init-proxy.sh && \
