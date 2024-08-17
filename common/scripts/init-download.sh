@@ -33,10 +33,12 @@ function cgdown() {
     cg down "$3/$source_path" -t $model_dir
     mkdir -p $(dirname $target_path)
 
-    mv "$model_dir/$3/$source_path" $target_path
+    if [ "$3" != "$1" ]; then
+      mv "$model_dir/$3/$source_path" $target_path
+    fi
   done
 
-  if [ -e "$3" ]; then
+  if [ -e "$3" ] && [ "$3" != "$1" ]; then
     rm -r $3
   fi
 
