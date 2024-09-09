@@ -17,6 +17,8 @@ tzwm:
     ip_adapter
   clip_vision: clip_vision
   unet: unet
+  animatediff_models: animatediff_model
+  animatediff_motion_lora: animatediff_lora
 
 fs:
   base_path: /root/autodl-fs/models
@@ -35,3 +37,5 @@ fs:
     ip_adapter
   clip_vision: clip_vision
   unet: unet
+  animatediff_models: animatediff_model
+  animatediff_motion_lora: animatediff_lora
