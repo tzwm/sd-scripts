@@ -23,7 +23,7 @@ function cgdown() {
   fi
 
   if [ "$data" == "empty" ]; then
-    mkdir -p $(dirname $target_path)
+    mkdir -p $target_dir
     echo $(date +%s) > $init_file
     echo -e ">>>> $1 预置文件夹搞定\n"
     return
