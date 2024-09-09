@@ -78,7 +78,8 @@ fi
 
 if [ "$1" == "vae" ]; then
   data="vae-ft-mse-840000-ema-pruned.safetensors,vae-ft-mse-840000-ema-pruned.safetensors
-sdxl_vae_fp16_fix.safetensors,sdxl_vae_fp16_fix.safetensors"
+sdxl_vae_fp16_fix.safetensors,sdxl_vae_fp16_fix.safetensors
+ae.safetensors,ae.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-VAE"
 fi
@@ -139,24 +140,26 @@ if [ "$1" == "controlnet_sd15_v1_1_lite" ]; then
 control_v11f1p_sd15_depth_fp16.safetensors,control_v11f1p_sd15_depth_fp16.safetensors
 control_v11p_sd15_lineart_fp16.safetensors,control_v11p_sd15_lineart_fp16.safetensors
 control_v11p_sd15_openpose_fp16.safetensors,control_v11p_sd15_openpose_fp16.safetensors
-control_v11p_sd15_inpaint_fp16.safetensors,control_v11p_sd15_inpaint_fp16.safetensors
 control_v11p_sd15_seg_fp16.safetensors,control_v11p_sd15_seg_fp16.safetensors
 control_v11p_sd15_canny_fp16.safetensors,control_v11p_sd15_canny_fp16.safetensors
-control_v11p_sd15_softedge_fp16.safetensors,control_v11p_sd15_softedge_fp16.safetensors
 control_v11f1e_sd15_tile.yaml,control_v11f1e_sd15_tile.yaml
 control_v11f1p_sd15_depth.yaml,control_v11f1p_sd15_depth.yaml
 control_v11p_sd15_lineart.yaml,control_v11p_sd15_lineart.yaml
 control_v11p_sd15_openpose.yaml,control_v11p_sd15_openpose.yaml
-control_v11p_sd15_inpaint.yaml,control_v11p_sd15_inpaint.yaml
 control_v11p_sd15_seg.yaml,control_v11p_sd15_seg.yaml
-control_v11p_sd15_softedge.yaml,control_v11p_sd15_softedge.yaml
 control_v11p_sd15_canny.yaml,control_v11p_sd15_canny.yaml"
+
+# control_v11p_sd15_softedge_fp16.safetensors,control_v11p_sd15_softedge_fp16.safetensors
+# control_v11p_sd15_inpaint_fp16.safetensors,control_v11p_sd15_inpaint_fp16.safetensors
 #control_v11e_sd15_ip2p_fp16.safetensors,control_v11e_sd15_ip2p_fp16.safetensors
 #control_v11e_sd15_shuffle_fp16.safetensors,control_v11e_sd15_shuffle_fp16.safetensors
 #control_v11p_sd15_mlsd_fp16.safetensors,control_v11p_sd15_mlsd_fp16.safetensors
 #control_v11p_sd15_normalbae_fp16.safetensors,control_v11p_sd15_normalbae_fp16.safetensors
 #control_v11p_sd15_scribble_fp16.safetensors,control_v11p_sd15_scribble_fp16.safetensors
 #control_v11p_sd15s2_lineart_anime_fp16.safetensors,control_v11p_sd15s2_lineart_anime_fp16.safetensors
+
+# control_v11p_sd15_softedge.yaml,control_v11p_sd15_softedge.yaml
+# control_v11p_sd15_inpaint.yaml,control_v11p_sd15_inpaint.yaml
 #control_v11e_sd15_ip2p.yaml,control_v11e_sd15_ip2p.yaml
 #control_v11e_sd15_shuffle.yaml,control_v11e_sd15_shuffle.yaml
 #control_v11p_sd15_mlsd.yaml,control_v11p_sd15_mlsd.yaml
@@ -280,8 +283,8 @@ SadTalker_V0.0.2_512.safetensors,SadTalker_V0.0.2_512.safetensors"
 fi
 
 if [ "$1" == "animatediff_model" ]; then
-  data="mm_sd15_v2.safetensors,mm_sd15_v2.safetensors
-mm_sd15_v3.safetensors,mm_sd15_v3.safetensors"
+  data="mm_sd15_v2.safetensors,mm_sd15_v2.safetensors"
+# mm_sd15_v3.safetensors,mm_sd15_v3.safetensors
 
   cgdown "$1" "$data" "AnimateDiff-Models"
 
@@ -443,9 +446,9 @@ if [ "$1" == "ollama" ]; then
 fi
 
 if [ "$1" == "unet" ]; then
-  data="empty"
+  data="flux1-dev-fp8_unet.safetensors,flux1-dev-fp8_unet.safetensors"
 
-  cgdown "$1" "$data" "unet"
+  cgdown "$1" "$data" "sd-unet" "unet"
 fi
 
 
