@@ -22,6 +22,13 @@ function cgdown() {
     return
   fi
 
+  if [ "$data" == "empty" ]; then
+    mkdir -p $(dirname $target_path)
+    echo $(date +%s) > $init_file
+    echo -e ">>>> $1 预置文件夹搞定\n"
+    return
+  fi
+
   echo "$data" | while read line; do
     target_path="$target_dir/$(echo $line | cut -d ',' -f 1)"
     source_path=$(echo $line | cut -d ',' -f 2)
@@ -434,6 +441,13 @@ if [ "$1" == "ollama" ]; then
 
   cgdown "$1" "$data" "ollama"
 fi
+
+if [ "$1" == "unet" ]; then
+  data="empty"
+
+  cgdown "$1" "$data" "unet"
+fi
+
 
 
 cache_backup_dir="/root/cache"
