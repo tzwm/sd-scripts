@@ -446,7 +446,7 @@ if [ "$1" == "ollama" ]; then
 fi
 
 if [ "$1" == "unet" ]; then
-  data="flux1-dev-fp8_unet.safetensors,flux1-dev-fp8_unet.safetensors"
+  data="flux1-dev-unet-fp8-e4m3fn.safetensors,flux1-dev-unet-fp8-e4m3fn.safetensors"
 
   cgdown "$1" "$data" "sd-unet" "unet"
 fi
