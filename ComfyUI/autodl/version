@@ -1,3 +1,7 @@
+- 20240908 v5.1 (v11)
+  - 调整 unet 模型路径，预置 flux1-dev-fp8_unet.safetensors 和 ae.safetensors
+  - 调整一些预置模型，腾挪空间
+  - 更新一下插件和本体
 - 20240714 v5.0 (v10)
   - 升级 ComfyUI 本体和所有插件到最新，支持 FLUX、SD3、混元等
   - 新增 ollama 环境和相关 ComfyUI 插件，预置 qwen2-7b int4 的基础模型
