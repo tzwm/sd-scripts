@@ -450,6 +450,20 @@ if [ "$1" == "unet" ]; then
   cgdown "$1" "$data" "sd-unet" "unet"
 fi
 
+if [ "$1" == "in_context_lora" ]; then
+  data="couple-profile.safetensors,couple-profile.safetensors
+film-storyboard.safetensors,film-storyboard.safetensors
+font-design.safetensors,font-design.safetensors
+home-decoration.safetensors,home-decoration.safetensors
+portrait-illustration.safetensors,portrait-illustration.safetensors
+portrait-photography.safetensors,portrait-photography.safetensors
+ppt-templates.safetensors,ppt-templates.safetensors
+sandstorm-visual-effect.safetensors,sandstorm-visual-effect.safetensors
+sparklers-visual-effect.safetensors,sparklers-visual-effect.safetensors
+visual-identity-design.safetensors,visual-identity-design.safetensors"
+
+  cgdown "$1" "$data" "in_context_lora" "lora"
+fi
 
 
 cache_backup_dir="/root/cache"
