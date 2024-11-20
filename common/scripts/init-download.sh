@@ -88,9 +88,7 @@ if [ "$1" == "lora" ]; then
   data="sd15_lcm_lora_rank1.safetensors,sd15_lcm_lora_rank1.safetensors
 sdxl_LCM_lora_rank1.safetensors,sdxl_LCM_lora_rank1.safetensors
 sdxl_lightning_4step_lora.safetensors,sdxl_lightning_4step_lora.safetensors
-sdxl_lightning_8step_lora.safetensors,sdxl_lightning_8step_lora.safetensors
-Hyper-SDXL-8steps-CFG-lora.safetensors,Hyper-SDXL-8steps-CFG-lora.safetensors
-Hyper-SD15-8steps-CFG-lora.safetensors,Hyper-SD15-8steps-CFG-lora.safetensors"
+sdxl_lightning_8step_lora.safetensors,sdxl_lightning_8step_lora.safetensors"
 
   cgdown "$1" "$data" "StableDiffusion-LoRAs"
 fi
@@ -190,8 +188,9 @@ fi
 
 #controlnet sdxl
 if [ "$1" == "controlnet_sdxl" ]; then
-  data="ttplanetSDXLControlnet_v20Fp16.safetensors,ttplanetSDXLControlnet_v20Fp16.safetensors
-mistoLine_rank256.safetensors,mistoLine_rank256.safetensors"
+  data="controlnet-union-sdxl-1.0_promax.safetensors,controlnet-union-sdxl-1.0_promax.safetensors"
+#   data="ttplanetSDXLControlnet_v20Fp16.safetensors,ttplanetSDXLControlnet_v20Fp16.safetensors
+# mistoLine_rank256.safetensors,mistoLine_rank256.safetensors"
 
   cgdown "$1" "$data" "ControlNet-SDXL" "controlnet"
 fi
