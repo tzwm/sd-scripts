@@ -373,8 +373,7 @@ if [ "$1" == "ip_adapter" ]; then
 ip-adapter-plus_sd15.safetensors,ip-adapter-plus_sd15.safetensors
 ip-adapter-plus-face_sd15.safetensors,ip-adapter-plus-face_sd15.safetensors
 ip-adapter-plus_sdxl_vit-h.safetensors,ip-adapter-plus_sdxl_vit-h.safetensors
-ip-adapter-plus-face_sdxl_vit-h.safetensors,ip-adapter-plus-face_sdxl_vit-h.safetensors
-ip-adapter_pulid_sdxl_fp16.safetensors,ip-adapter_pulid_sdxl_fp16.safetensors"
+ip-adapter-plus-face_sdxl_vit-h.safetensors,ip-adapter-plus-face_sdxl_vit-h.safetensors"
 
   if [ -e $sd_webui_dir ]; then
     cgdown "$1" "$data" "IP-Adapter_tzwm" "controlnet"
