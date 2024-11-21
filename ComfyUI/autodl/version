@@ -1,3 +1,10 @@
+- 20241122 v5.2 (v12)
+  - 新增 In Context LoRA 10 个官方模型和 Comfyui-In-Context-Lora-Utils 插件
+  - 新增 ComfyUI_BiRefNet_ll 插件，并预置最新的 general model
+  - 新增最新的 SmilingWolf/wd-eva02-large-tagger-v3 模型
+  - 删除所有预置的 SD15 模型，精简一些其他不常用模型
+  - 删除 ComfyUI-layerdiffuse 插件
+  - 更新本体和所有预置插件到最新
 - 20240908 v5.1 (v11)
   - 调整 unet 模型路径，预置 flux1-dev-fp8_unet.safetensors 和 ae.safetensors
   - 调整一些预置模型，腾挪空间
