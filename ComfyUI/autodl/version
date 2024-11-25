@@ -1,3 +1,5 @@
+- 20241124 v5.3 (v13)
+  - 更新 ComfyUI 本体，支持 LTX Video。相关模型可以在 这里 自行下载
 - 20241122 v5.2 (v12)
   - 新增 In Context LoRA 10 个官方模型和 Comfyui-In-Context-Lora-Utils 插件
   - 新增 ComfyUI_BiRefNet_ll 插件，并预置最新的 general model
