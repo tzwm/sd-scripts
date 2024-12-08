@@ -1,3 +1,8 @@
+- 20241207 v6.0 (v13)
+  - 更新 ComfyUI 本体，支持 [masking and scheduling lora and model weights](https://blog.comfy.org/masking-and-scheduling-lora-and-model-weights/)
+  - 默认使用 ComfyUI 新的交互和 UI 了
+  - 新增 masquerade nodes 插件
+  - 新增 vision clip_g 模型
 - 20241124 v5.3 (v13)
   - 更新 ComfyUI 本体，支持 LTX Video。相关模型可以在 这里 自行下载
 - 20241122 v5.2 (v12)
