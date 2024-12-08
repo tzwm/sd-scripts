@@ -418,8 +418,8 @@ ip-adapter-faceid_sdxl_lora.safetensors,ip-adapter-faceid_sdxl_lora.safetensors"
 fi
 
 if [ "$1" == "clip_vision" ]; then
-  data="clip_h.pth,clip_h.pth"
-#clip_g.pth,clip_g.pth
+  data="clip_h.pth,clip_h.pth
+clip_g.pth,clip_g.pth"
 
   cgdown "$1" "$data" "StableDiffusion-others"
 fi
