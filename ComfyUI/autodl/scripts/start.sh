@@ -13,5 +13,4 @@ ollama serve &
 cd /root/ComfyUI
 
 source /root/tzwm-autodl/common/scripts/init-proxy.sh && \
-HF_ENDPOINT=https://hf-mirror.com \
-python main.py --port 6006 --listen 0.0.0.0
+python main.py --port 6006 --listen 0.0.0.0 --front-end-version Comfy-Org/ComfyUI_frontend@v1.5.17
