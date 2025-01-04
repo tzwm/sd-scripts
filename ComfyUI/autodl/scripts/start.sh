@@ -12,5 +12,5 @@ ollama serve &
 
 cd /root/ComfyUI
 
-source /root/tzwm-autodl/common/scripts/init-proxy.sh && \
+source /root/tzwm-scripts/common/scripts/init-proxy.sh && \
 python main.py --port 6006 --listen 0.0.0.0
