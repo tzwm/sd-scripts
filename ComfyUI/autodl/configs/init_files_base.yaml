@@ -34,7 +34,12 @@ files:
     cg_path: StableDiffusion-others/clip_g.pth
     target: /root/autodl-tmp/ComfyUI/models/clip_vision/
 
-  # ollama
+  # BiRefNet
   - type: codewithgpu
-    cg_path: ollama/sha256-43f7a214e5329f672bb05404cfba1913cbb70fdaa1a17497224e1925046b0ed5,sha256-43f7a214e5329f672bb05404cfba1913cbb70fdaa1a17497224e1925046b0ed5
-    target: /root/models/ollama
+    cg_path: BiRefNet_tzwm/General.safetensors
+    target: /root/autodl-tmp/ComfyUI/models/BiRefNet/
+
+  # tagger
+  - type: codewithgpu
+    cg_path: StableDiffusion-others/wd-eva02-large-tagger-v3.onnx
+    target: /root/autodl-tmp/ComfyUI/custom_nodes/ComfyUI-WD14-Tagger/models/
