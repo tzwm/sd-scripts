@@ -1,0 +1,15 @@
+configs:
+  name: flux
+  tmp_path: /root/autodl-tmp
+  skip_mark_path: /root/autodl-tmp/.skip_init_files_flux
+
+files:
+  # unet
+  - type: codewithgpu
+    cg_path: sd-unet/flux1-dev-unet-fp8-e4m3fn.safetensors
+    target: /root/autodl-tmp/ComfyUI/models/unet
+
+  # vae
+  - type: codewithgpu
+    cg_path: StableDiffusion-VAE/ae.safetensors
+    target: /root/autodl-tmp/ComfyUI/models/vae/

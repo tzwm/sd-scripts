@@ -1,0 +1,40 @@
+configs:
+  name: base
+  tmp_path: /root/autodl-tmp
+  skip_mark_path: /root/autodl-tmp/.skip_init_files_base
+
+files:
+  # segment_anything
+  - type: codewithgpu
+    cg_path: StableDiffusion-others/GroundingDINO_SwinT_OGC.py
+    target: /root/autodl-tmp/ComfyUI/models/grounding-dino/
+  - type: codewithgpu
+    cg_path: StableDiffusion-others/groundingdino_swint_ogc.pth
+    target: /root/autodl-tmp/ComfyUI/models/grounding-dino/
+  - type: codewithgpu
+    cg_path: StableDiffusion-others/sam_vit_h_4b8939.pth
+    target: /root/autodl-tmp/ComfyUI/models/sams/
+
+  # upscaler
+  - type: codewithgpu
+    cg_path: StableDiffusion-others/RealESRGAN_x2plus.pth
+    target: /root/autodl-tmp/ComfyUI/models/upscale_models/
+  - type: codewithgpu
+    cg_path: StableDiffusion-others/RealESRGAN_x4plus.pth
+    target: /root/autodl-tmp/ComfyUI/models/upscale_models/
+  - type: codewithgpu
+    cg_path: StableDiffusion-others/RealESRGAN_x4plus_anime_6B.pth
+    target: /root/autodl-tmp/ComfyUI/models/upscale_models/
+
+  # clip_vision
+  - type: codewithgpu
+    cg_path: StableDiffusion-others/clip_h.pth
+    target: /root/autodl-tmp/ComfyUI/models/clip_vision/
+  - type: codewithgpu
+    cg_path: StableDiffusion-others/clip_g.pth
+    target: /root/autodl-tmp/ComfyUI/models/clip_vision/
+
+  # ollama
+  - type: codewithgpu
+    cg_path: ollama/sha256-43f7a214e5329f672bb05404cfba1913cbb70fdaa1a17497224e1925046b0ed5,sha256-43f7a214e5329f672bb05404cfba1913cbb70fdaa1a17497224e1925046b0ed5
+    target: /root/models/ollama
