@@ -1,26 +1,26 @@
 configs:
   name: flux
   tmp_path: /root/autodl-tmp
-  skip_mark_path: /root/autodl-tmp/.skip_init_files_flux
+  skip_mark_path: /root/autodl-tmp/skip_init_files_flux
 
 files:
   # unet
   - type: codewithgpu
     cg_path: sd-unet/flux1-dev-unet-fp8-e4m3fn.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/unet/
+    target: /root/autodl-tmp/models/unet/
 
   # vae
   - type: codewithgpu
     cg_path: StableDiffusion-VAE/ae.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/vae/
+    target: /root/autodl-tmp/models/vae/
 
   # clip
   - type: codewithgpu
     cg_path: stable-diffusion-3-medium/t5xxl_fp8_e4m3fn.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/clip/
+    target: /root/autodl-tmp/models/clip/
   - type: codewithgpu
     cg_path: stable-diffusion-3-medium/clip_l.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/clip/
+    target: /root/autodl-tmp/models/clip/
   - type: codewithgpu
     cg_path: stable-diffusion-3-medium/clip_g.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/clip/
+    target: /root/autodl-tmp/models/clip/

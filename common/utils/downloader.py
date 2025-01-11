@@ -42,7 +42,7 @@ def prepare_init_files(filelist_path: str):
 
     skip_mark = data['configs']['skip_mark_path']
     if os.path.exists(skip_mark):
-        print(f"跳过模型初始化。想要重新初始化可以删除标记文件: {skip_mark}")
+        print(f"跳过 {data['configs']['name']} 模型初始化。想要重新初始化可以删除标记文件: {skip_mark}")
         return
 
     tmp_path = data['configs']['tmp_path']

@@ -1,25 +1,36 @@
 configs:
   name: sd15
   tmp_path: /root/autodl-tmp
-  skip_mark_path: /root/autodl-tmp/.skip_init_files_sd15
+  skip_mark_path: /root/autodl-tmp/skip_init_files_sd15
 
 files:
   # checkpoints
   - type: codewithgpu
     cg_path: StableDiffusion-checkpoints/majicmixRealistic_v7.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/checkpoints/
+    target: /root/autodl-tmp/models/checkpoint/
 
   # vae
   - type: codewithgpu
     cg_path: StableDiffusion-VAE/vae-ft-mse-840000-ema-pruned.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/vae/
+    target: /root/autodl-tmp/models/vae/
 
   # loras
   - type: codewithgpu
     cg_path: StableDiffusion-LoRAs/sd15_lcm_lora_rank1.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/loras/
+    target: /root/autodl-tmp/models/loras/
 
   # embeddings
   - type: codewithgpu
     cg_path: StableDiffusion-Embeddings/easy_negative.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/embeddings/
+    target: /root/autodl-tmp/models/embeddings/
+
+  # ipadapter
+  - type: codewithgpu
+    cg_path: IP-Adapter_tzwm/ip-adapter_sd15.safetensors
+    target: /root/autodl-tmp/models/ip_adapter/
+  - type: codewithgpu
+    cg_path: IP-Adapter_tzwm/ip-adapter-plus_sd15.safetensors
+    target: /root/autodl-tmp/models/ip_adapter/
+  - type: codewithgpu
+    cg_path: IP-Adapter_tzwm/ip-adapter-plus-face_sd15.safetensors
+    target: /root/autodl-tmp/models/ip_adapter/

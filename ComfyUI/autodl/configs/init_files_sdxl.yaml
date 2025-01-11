@@ -1,45 +1,45 @@
 configs:
   name: sdxl
   tmp_path: /root/autodl-tmp
-  skip_mark_path: /root/autodl-tmp/.skip_init_files_sdxl
+  skip_mark_path: /root/autodl-tmp/skip_init_files_sdxl
 
 files:
   # checkpoints
   - type: codewithgpu
     cg_path: StableDiffusion-checkpoints/juggernautXL_v9Rundiffusionphoto2.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/checkpoints/
+    target: /root/autodl-tmp/models/checkpoint/
 
   # vae
   - type: codewithgpu
     cg_path: StableDiffusion-VAE/sdxl_vae_fp16_fix.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/vae/
+    target: /root/autodl-tmp/models/vae/
 
   # loras
   - type: codewithgpu
     cg_path: StableDiffusion-LoRAs/sdxl_LCM_lora_rank1.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/loras/
+    target: /root/autodl-tmp/models/loras/
   - type: codewithgpu
     cg_path: StableDiffusion-LoRAs/sdxl_lightning_8step_lora.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/loras/
+    target: /root/autodl-tmp/models/loras/
 
   # controlnet
   - type: codewithgpu
     cg_path: ControlNet-SDXL/controlnet-union-sdxl-1.0_promax.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/controlnet/
+    target: /root/autodl-tmp/models/controlnet/
 
   # ipadapter
   - type: codewithgpu
     cg_path: IP-Adapter_tzwm/ip-adapter_sd15.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/ip_adapter/
+    target: /root/autodl-tmp/models/ip_adapter/
   - type: codewithgpu
     cg_path: IP-Adapter_tzwm/ip-adapter-plus_sd15.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/ip_adapter/
+    target: /root/autodl-tmp/models/ip_adapter/
   - type: codewithgpu
     cg_path: IP-Adapter_tzwm/ip-adapter-plus-face_sd15.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/ip_adapter/
+    target: /root/autodl-tmp/models/ip_adapter/
   - type: codewithgpu
     cg_path: IP-Adapter_tzwm/ip-adapter-plus_sdxl_vit-h.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/ip_adapter/
+    target: /root/autodl-tmp/models/ip_adapter/
   - type: codewithgpu
     cg_path: IP-Adapter_tzwm/ip-adapter-plus-face_sdxl_vit-h.safetensors
-    target: /root/autodl-tmp/ComfyUI/models/ip_adapter/
+    target: /root/autodl-tmp/models/ip_adapter/

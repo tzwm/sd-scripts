@@ -1,7 +1,7 @@
 configs:
   name: llm
   tmp_path: /root/autodl-tmp
-  skip_mark_path: /root/autodl-tmp/.skip_init_files_llm
+  skip_mark_path: /root/autodl-tmp/skip_init_files_llm
 
 files:
   # ollama

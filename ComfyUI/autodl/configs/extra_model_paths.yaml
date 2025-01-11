@@ -1,41 +1,64 @@
 #Rename this to extra_model_paths.yaml and ComfyUI will load it
 
-tzwm:
+main:
   base_path: /root/autodl-tmp/models
   checkpoints: checkpoint
   configs: checkpoint
   vae: vae
-  loras: |
-    lora
-    ip_adapter_faceid/lora
-  upscale_models: upscaler
+  loras: loras
+  upscale_models: upscale_models
   embeddings: embeddings
   hypernetworks: embeddings
   controlnet: controlnet
-  ipadapter: |
-    ip_adapter_faceid/models
-    ip_adapter
+  ipadapter: ip_adapter
+  clip: clip
   clip_vision: clip_vision
   unet: unet
-  animatediff_models: animatediff_model
+  animatediff_models: animatediff_models
   animatediff_motion_lora: animatediff_lora
+  wd14_tagger: wd14_tagger
+  birefnet: BiRefNet
+  sams: sams
+  grounding-dino: grounding-dino
+
+sys:
+  base_path: /root/models
+  checkpoints: checkpoint
+  configs: checkpoint
+  vae: vae
+  loras: loras
+  upscale_models: upscale_models
+  embeddings: embeddings
+  hypernetworks: embeddings
+  controlnet: controlnet
+  ipadapter: ip_adapter
+  clip: clip
+  clip_vision: clip_vision
+  unet: unet
+  animatediff_models: animatediff_models
+  animatediff_motion_lora: animatediff_lora
+  wd14_tagger: wd14_tagger
+  birefnet: BiRefNet
+  sams: sams
+  grounding-dino: grounding-dino
 
 fs:
   base_path: /root/autodl-fs/models
   checkpoints: checkpoint
   configs: checkpoint
   vae: vae
-  loras: |
-    lora
-    ip_adapter_faceid/lora
-  upscale_models: upscaler
+  loras: loras
+  upscale_models: upscale_models
   embeddings: embeddings
   hypernetworks: embeddings
   controlnet: controlnet
-  ipadapter: |
-    ip_adapter_faceid/models
-    ip_adapter
+  ipadapter: ip_adapter
+  clip: clip
   clip_vision: clip_vision
   unet: unet
-  animatediff_models: animatediff_model
+  animatediff_models: animatediff_models
   animatediff_motion_lora: animatediff_lora
+  wd14_tagger: wd14_tagger
+  birefnet: BiRefNet
+  sams: sams
+  grounding-dino: grounding-dino
