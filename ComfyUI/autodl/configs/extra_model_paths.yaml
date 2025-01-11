@@ -20,6 +20,8 @@ main:
   birefnet: BiRefNet
   sams: sams
   grounding-dino: grounding-dino
+  diffusion_models: diffusion_models
+  text_encoders: text_encoders
 
 sys:
   base_path: /root/models
@@ -41,6 +43,8 @@ sys:
   birefnet: BiRefNet
   sams: sams
   grounding-dino: grounding-dino
+  diffusion_models: diffusion_models
+  text_encoders: text_encoders
 
 fs:
   base_path: /root/autodl-fs/models
@@ -62,3 +66,5 @@ fs:
   birefnet: BiRefNet
   sams: sams
   grounding-dino: grounding-dino
+  diffusion_models: diffusion_models
+  text_encoders: text_encoders

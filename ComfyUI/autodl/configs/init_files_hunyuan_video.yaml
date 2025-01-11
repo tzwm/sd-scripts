@@ -1,0 +1,18 @@
+configs:
+  name: huanyuan_video
+  tmp_path: /root/autodl-tmp
+  skip_mark_path: /root/autodl-tmp/skip_init_files_huanyuan_video
+
+files:
+  - type: codewithgpu
+    cg_path: HunyuanVideo_repackaged/hunyuan_video_t2v_720p_bf16.safetensors
+    target: /root/autodl-tmp/models/diffusion_models/
+  - type: codewithgpu
+    cg_path: HunyuanVideo_repackaged/llava_llama3_fp8_scaled.safetensors
+    target: /root/autodl-tmp/models/text_encoders/
+  - type: codewithgpu
+    cg_path: HunyuanVideo_repackaged/clip_l.safetensors
+    target: /root/autodl-tmp/models/clip/
+  - type: codewithgpu
+    cg_path: HunyuanVideo_repackaged/hunyuan_video_vae_bf16.safetensors
+    target: /root/autodl-tmp/models/vae/
