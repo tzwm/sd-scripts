@@ -7,42 +7,42 @@ files:
   # segment_anything
   - type: codewithgpu
     cg_path: StableDiffusion-others/GroundingDINO_SwinT_OGC.py
-    target: /root/autodl-tmp/models/grounding-dino/
+    target: /root/models/grounding-dino/
   - type: codewithgpu
     cg_path: StableDiffusion-others/groundingdino_swint_ogc.pth
-    target: /root/autodl-tmp/models/grounding-dino/
+    target: /root/models/grounding-dino/
   - type: codewithgpu
     cg_path: StableDiffusion-others/sam_vit_h_4b8939.pth
-    target: /root/autodl-tmp/models/sams/
+    target: /root/models/sams/
 
   # upscaler
   - type: codewithgpu
     cg_path: StableDiffusion-others/RealESRGAN_x2plus.pth
-    target: /root/autodl-tmp/models/upscale_models/
+    target: /root/models/upscale_models/
   - type: codewithgpu
     cg_path: StableDiffusion-others/RealESRGAN_x4plus.pth
-    target: /root/autodl-tmp/models/upscale_models/
+    target: /root/models/upscale_models/
   - type: codewithgpu
     cg_path: StableDiffusion-others/RealESRGAN_x4plus_anime_6B.pth
-    target: /root/autodl-tmp/models/upscale_models/
+    target: /root/models/upscale_models/
 
   # clip_vision
   - type: codewithgpu
     cg_path: StableDiffusion-others/clip_h.pth
-    target: /root/autodl-tmp/models/clip_vision/
+    target: /root/models/clip_vision/
   - type: codewithgpu
     cg_path: StableDiffusion-others/clip_g.pth
-    target: /root/autodl-tmp/models/clip_vision/
+    target: /root/models/clip_vision/
 
   # BiRefNet
   - type: codewithgpu
     cg_path: BiRefNet_tzwm/General.safetensors
-    target: /root/autodl-tmp/models/BiRefNet/
+    target: /root/models/BiRefNet/
 
   # tagger
   - type: codewithgpu
     cg_path: StableDiffusion-others/wd-eva02-large-tagger-v3.csv
-    target: /root/autodl-tmp/models/wd14_tagger/
+    target: /root/models/wd14_tagger/
   - type: codewithgpu
     cg_path: StableDiffusion-others/wd-eva02-large-tagger-v3.onnx
-    target: /root/autodl-tmp/models/wd14_tagger/
+    target: /root/models/wd14_tagger/
