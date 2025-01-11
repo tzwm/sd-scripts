@@ -41,5 +41,8 @@ files:
 
   # tagger
   - type: codewithgpu
+    cg_path: StableDiffusion-others/wd-eva02-large-tagger-v3.csv
+    target: /root/autodl-tmp/models/wd14_tagger/
+  - type: codewithgpu
     cg_path: StableDiffusion-others/wd-eva02-large-tagger-v3.onnx
     target: /root/autodl-tmp/models/wd14_tagger/

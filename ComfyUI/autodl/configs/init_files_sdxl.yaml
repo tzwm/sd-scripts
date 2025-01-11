@@ -29,15 +29,6 @@ files:
 
   # ipadapter
   - type: codewithgpu
-    cg_path: IP-Adapter_tzwm/ip-adapter_sd15.safetensors
-    target: /root/autodl-tmp/models/ip_adapter/
-  - type: codewithgpu
-    cg_path: IP-Adapter_tzwm/ip-adapter-plus_sd15.safetensors
-    target: /root/autodl-tmp/models/ip_adapter/
-  - type: codewithgpu
-    cg_path: IP-Adapter_tzwm/ip-adapter-plus-face_sd15.safetensors
-    target: /root/autodl-tmp/models/ip_adapter/
-  - type: codewithgpu
     cg_path: IP-Adapter_tzwm/ip-adapter-plus_sdxl_vit-h.safetensors
     target: /root/autodl-tmp/models/ip_adapter/
   - type: codewithgpu
