@@ -12,3 +12,7 @@ $sudo_prefix apt-get install -y \
   aria2 ffmpeg unzip vim htop
 
 pip install --upgrade pip
+
+pip install pickleshare
+
+curl -fsSL https://ollama.com/install.sh | sh
