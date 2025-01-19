@@ -1,5 +1,5 @@
-- 20250111 v6.1 (v14)
-  - 更新基础环境到 PyTorch 2.5.1, Python 3.12(ubuntu22.04), Cuda 12.4
+- 20250119 v6.1 (v14)
+  - 更新基础环境到 PyTorch 2.5.1, Python 3.11(ubuntu22.04), Cuda 12.4
   - 调整了 ComfyUI 本体的路径到数据盘，方便大家扩容和自行下载模型
   - 更新 ComfyUI 本体，支持 HunyuanVideo
   - 重写了模型初始化脚本，后续可以方便选择想要哪一种环境预设，比如可以选择是 SD15/SDXL/Flux/HunyuanVideo 等
