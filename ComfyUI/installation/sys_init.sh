@@ -13,6 +13,6 @@ $sudo_prefix apt-get install -y \
 
 pip install --upgrade pip
 
-pip install pickleshare
+pip install pickleshare codewithgpu jupyterlab-language-pack-zh-CN
 
-curl -fsSL https://ollama.com/install.sh | sh
+# curl -fsSL https://ollama.com/install.sh | sh
