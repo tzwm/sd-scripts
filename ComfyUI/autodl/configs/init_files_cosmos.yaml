@@ -1,0 +1,15 @@
+configs:
+  name: cosmos
+  tmp_path: /root/autodl-tmp
+  skip_mark_path: /root/autodl-tmp/skip_init_files_cosmos
+
+files:
+  - type: codewithgpu
+    cg_path: cosmos/cosmos_cv8x8x8_1.0.safetensors
+    target: /root/autodl-tmp/models/vae/
+  - type: codewithgpu
+    cg_path: cosmos/Cosmos-1_0-Diffusion-7B-Video2World.safetensors
+    target: /root/autodl-tmp/models/diffusion_models/
+  - type: codewithgpu
+    cg_path: cosmos/oldt5_xxl_fp8_e4m3fn_scaled.safetensors
+    target: /root/autodl-tmp/models/text_encoders/
