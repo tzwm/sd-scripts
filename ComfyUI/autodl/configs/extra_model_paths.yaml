@@ -16,7 +16,7 @@ main:
   unet: unet
   animatediff_models: animatediff_models
   animatediff_motion_lora: animatediff_lora
-  wd14_tagger: wd14_tagger
+  # wd14_tagger: wd14_tagger
   birefnet: BiRefNet
   sams: sams
   grounding-dino: grounding-dino
@@ -62,7 +62,7 @@ fs:
   unet: unet
   animatediff_models: animatediff_models
   animatediff_motion_lora: animatediff_lora
-  wd14_tagger: wd14_tagger
+  # wd14_tagger: wd14_tagger
   birefnet: BiRefNet
   sams: sams
   grounding-dino: grounding-dino
