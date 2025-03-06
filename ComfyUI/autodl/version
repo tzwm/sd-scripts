@@ -1,3 +1,8 @@
+- 20250306 v6.2 (v15)
+  - 更新本体和插件，支持 Wan2.1, HunyuanVideo I2V, LTX 0.9.5 等
+  - 新增 LTX 0.9.5 模型预设
+  - 新增 Wan2.1 T2V 1.3B 模型预设
+  - 新增 TeaCache 和 WaveSpeed 插件
 - 20250119 v6.1 (v14)
   - 更新基础环境到 PyTorch 2.5.1, Python 3.11(ubuntu22.04), Cuda 12.4
   - 调整了 ComfyUI 本体的路径到数据盘，方便大家扩容和自行下载模型
