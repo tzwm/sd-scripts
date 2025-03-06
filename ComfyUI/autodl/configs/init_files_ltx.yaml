@@ -1,0 +1,12 @@
+configs:
+  name: ltx
+  tmp_path: /root/autodl-tmp
+  skip_mark_path: /root/autodl-tmp/skip_init_files_ltx
+
+files:
+  - type: codewithgpu
+    cg_path: LTX-Video/ltx-video-2b-v0.9.5.safetensors
+    target: /root/autodl-tmp/models/checkpoint/
+  - type: codewithgpu
+    cg_path: LTX-Video/t5xxl_fp8_e4m3fn_scaled.safetensors
+    target: /root/autodl-tmp/models/text_encoders/
