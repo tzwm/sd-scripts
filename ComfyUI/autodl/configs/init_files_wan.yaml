@@ -17,5 +17,5 @@ files:
     target: /root/autodl-tmp/models/vae/
 
   - type: codewithgpu
-    cg_path: Wan_2.1_ComfyUI_repackaged/clip_vision_h.safetensor
+    cg_path: Wan_2.1_ComfyUI_repackaged/clip_vision_h.safetensors
     target: /root/autodl-tmp/models/clip_vision/
