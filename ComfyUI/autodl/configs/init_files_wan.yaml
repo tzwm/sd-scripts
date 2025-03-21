@@ -8,7 +8,7 @@ files:
     cg_path: Kijai_WanVideo_comfy/Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
     target: /root/autodl-tmp/models/diffusion_models/
   - type: codewithgpu
-    cg_path: Wan_2.1_ComfyUI_repackaged/umt5_xxl_fp8_e4m3fn_scaled.safetensors
+    cg_path: Kijai_WanVideo_comfy/umt5-xxl-enc-fp8_e4m3fn.safetensors
     target: /root/autodl-tmp/models/text_encoders/
   - type: codewithgpu
     cg_path: Kijai_WanVideo_comfy/open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors
