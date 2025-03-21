@@ -5,17 +5,14 @@ configs:
 
 files:
   - type: codewithgpu
-    cg_path: Wan_2.1_ComfyUI_repackaged/wan2.1_t2v_1.3B_fp16.safetensors
+    cg_path: Kijai_WanVideo_comfy/Wan2_1-I2V-14B-480P_fp8_e4m3fn.safetensors
     target: /root/autodl-tmp/models/diffusion_models/
-
   - type: codewithgpu
     cg_path: Wan_2.1_ComfyUI_repackaged/umt5_xxl_fp8_e4m3fn_scaled.safetensors
     target: /root/autodl-tmp/models/text_encoders/
-
   - type: codewithgpu
-    cg_path: Wan_2.1_ComfyUI_repackaged/wan_2.1_vae.safetensors
+    cg_path: Kijai_WanVideo_comfy/open-clip-xlm-roberta-large-vit-huge-14_visual_fp16.safetensors
+    target: /root/autodl-tmp/models/text_encoders/
+  - type: codewithgpu
+    cg_path: Kijai_WanVideo_comfy/Wan2_1_VAE_bf16.safetensors
     target: /root/autodl-tmp/models/vae/
-
-  - type: codewithgpu
-    cg_path: Wan_2.1_ComfyUI_repackaged/clip_vision_h.safetensors
-    target: /root/autodl-tmp/models/clip_vision/
