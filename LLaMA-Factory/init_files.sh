@@ -6,6 +6,6 @@ mkdir -p $target_path
 if [ -d $init_files_path ]; then
   mv "$init_files_path/*" "$target_path/"
   rm -r $init_files_path
-end
+fi
 
 echo '初始化模型文件完成...'
