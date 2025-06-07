@@ -1,3 +1,10 @@
+- 20250607 v6.3 (v16)
+  - 更新本体和插件
+  - 预装 [SageAttention 2.1.1](https://github.com/thu-ml/SageAttention) 用于推理加速
+  - 预装 [SpargeAttn](https://github.com/thu-ml/SpargeAttn) 用于推理加速
+  - 删除 ComfyUI-AnimateDiff-Evolved
+  - 新增 ComfyUI-WanVideoWrapper 和相关模型配置（需要自己取消注释来下载）
+  - 预置 wan i2v 工作流方便测试
 - 20250306 v6.2 (v15)
   - 更新本体和插件，支持 Wan2.1, HunyuanVideo I2V, LTX 0.9.5 等
   - 新增 LTX 0.9.5 模型预设
