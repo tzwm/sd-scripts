@@ -1,12 +1,14 @@
 configs:
-  name: flux_kontext
+  name: nunchaku_flux
   tmp_path: /root/autodl-tmp
-  skip_mark_path: /root/autodl-tmp/skip_init_files_flux_kontext
+  skip_mark_path: /root/autodl-tmp/skip_init_files_nunchaku_flux
 
 files:
-  # unet
   - type: codewithgpu
-    cg_path: sd-unet/flux1-dev-kontext_fp8_scaled.safetensors
+    cg_path: tzwm_nunchaku/svdq-int4_r32-flux.1-kontext-dev.safetensors
+    target: /root/autodl-tmp/models/diffusion_models/
+  - type: codewithgpu
+    cg_path: tzwm_nunchaku/svdq-int4_r32-flux.1-dev.safetensors
     target: /root/autodl-tmp/models/diffusion_models/
 
   # vae
@@ -16,11 +18,8 @@ files:
 
   # clip
   - type: codewithgpu
-    cg_path: stable-diffusion-3-medium/t5xxl_fp8_e4m3fn.safetensors
+    cg_path: tzwm_nunchaku/awq-int4-flux.1-t5xxl.safetensors
     target: /root/autodl-tmp/models/clip/
   - type: codewithgpu
     cg_path: stable-diffusion-3-medium/clip_l.safetensors
-    target: /root/autodl-tmp/models/clip/
-  - type: codewithgpu
-    cg_path: stable-diffusion-3-medium/clip_g.safetensors
     target: /root/autodl-tmp/models/clip/
