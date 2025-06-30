@@ -24,3 +24,8 @@ files:
   - type: codewithgpu
     cg_path: stable-diffusion-3-medium/clip_g.safetensors
     target: /root/autodl-tmp/models/clip/
+
+  # lora
+  - type: codewithgpu
+    cg_path: tzwm_nunchaku/flux.1-turbo-alpha.safetensors
+    target: /root/autodl-tmp/models/loras/
