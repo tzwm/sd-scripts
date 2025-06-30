@@ -1,12 +1,12 @@
 configs:
   name: flux
   tmp_path: /root/autodl-tmp
-  skip_mark_path: /root/autodl-tmp/skip_init_files_flux
+  skip_mark_path: /root/autodl-tmp/skip_init_files_flux_kontext
 
 files:
   # unet
   - type: codewithgpu
-    cg_path: sd-unet/flux1-dev-unet-fp8-e4m3fn.safetensors
+    cg_path: sd-unet/flux1-dev-kontext_fp8_scaled.safetensors
     target: /root/autodl-tmp/models/diffusion_models/
 
   # vae
@@ -20,4 +20,7 @@ files:
     target: /root/autodl-tmp/models/clip/
   - type: codewithgpu
     cg_path: stable-diffusion-3-medium/clip_l.safetensors
+    target: /root/autodl-tmp/models/clip/
+  - type: codewithgpu
+    cg_path: stable-diffusion-3-medium/clip_g.safetensors
     target: /root/autodl-tmp/models/clip/
