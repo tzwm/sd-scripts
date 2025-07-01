@@ -1,3 +1,9 @@
+- 20250607 v6.4 (v17)
+  - 更新本体和插件
+  - 新增 nunchaku 依赖和插件，包括相关 flux 量化模型初始化文件，相关工作流
+  - 新增 flux kontext 初始化配置
+  - 新增 xformers==0.0.29，保持跟 PyTorch 2.5.1 的兼容
+  - 新增 flux.1-turbo-alpha.safetensors LoRA
 - 20250607 v6.3 (v16)
   - 更新本体和插件
   - 预装 [SageAttention 2.1.1](https://github.com/thu-ml/SageAttention) 用于推理加速
