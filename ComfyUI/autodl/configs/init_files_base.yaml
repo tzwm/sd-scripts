@@ -4,6 +4,11 @@ configs:
   skip_mark_path: /root/autodl-tmp/skip_init_files_base
 
 files:
+  # vae
+  - type: codewithgpu
+    cg_path: StableDiffusion-VAE/sdxl_vae_fp16_fix.safetensors
+    target: /root/autodl-tmp/models/vae/
+
   # segment_anything
   - type: codewithgpu
     cg_path: StableDiffusion-others/GroundingDINO_SwinT_OGC.py
