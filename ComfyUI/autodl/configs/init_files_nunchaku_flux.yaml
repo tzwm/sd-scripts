@@ -18,7 +18,7 @@ files:
 
   # clip
   - type: codewithgpu
-    cg_path: tzwm_nunchaku/awq-int4-flux.1-t5xxl.safetensors
+    cg_path: stable-diffusion-3-medium/t5xxl_fp8_e4m3fn.safetensors
     target: /root/autodl-tmp/models/clip/
   - type: codewithgpu
     cg_path: stable-diffusion-3-medium/clip_l.safetensors
