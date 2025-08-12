@@ -9,17 +9,6 @@ files:
     cg_path: StableDiffusion-VAE/sdxl_vae_fp16_fix.safetensors
     target: /root/autodl-tmp/models/vae/
 
-  # segment_anything
-  - type: codewithgpu
-    cg_path: StableDiffusion-others/GroundingDINO_SwinT_OGC.py
-    target: /root/models/grounding-dino/
-  - type: codewithgpu
-    cg_path: StableDiffusion-others/groundingdino_swint_ogc.pth
-    target: /root/models/grounding-dino/
-  - type: codewithgpu
-    cg_path: StableDiffusion-others/sam_vit_h_4b8939.pth
-    target: /root/models/sams/
-
   # upscaler
   - type: codewithgpu
     cg_path: StableDiffusion-others/RealESRGAN_x2plus.pth
