@@ -1,0 +1,19 @@
+configs:
+  name: nunchaku_qwen_image
+  tmp_path: /root/autodl-tmp
+  skip_mark_path: /root/autodl-tmp/skip_init_files_nunchaku_qwen_image
+
+files:
+  - type: codewithgpu
+    cg_path: tzwm_qwen-image/svdq-int4_r128-qwen-image-lightningv1.1-8steps.safetensors
+    target: /root/autodl-tmp/models/diffusion_models/
+
+  # vae
+  - type: codewithgpu
+    cg_path: tzwm_qwen-image/qwen_image_vae.safetensors
+    target: /root/autodl-tmp/models/vae/
+
+  # clip
+  - type: codewithgpu
+    cg_path: tzwm_qwen-image/qwen_2.5_vl_7b_fp8_scaled.safetensors
+    target: /root/autodl-tmp/models/clip/
