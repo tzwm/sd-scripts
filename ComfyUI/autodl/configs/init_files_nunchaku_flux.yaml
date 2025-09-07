@@ -7,9 +7,9 @@ files:
   - type: codewithgpu
     cg_path: tzwm_nunchaku/svdq-int4_r32-flux.1-kontext-dev.safetensors
     target: /root/autodl-tmp/models/diffusion_models/
-  - type: codewithgpu
-    cg_path: tzwm_nunchaku/svdq-int4_r32-flux.1-dev.safetensors
-    target: /root/autodl-tmp/models/diffusion_models/
+  # - type: codewithgpu
+  #   cg_path: tzwm_nunchaku/svdq-int4_r32-flux.1-dev.safetensors
+  #   target: /root/autodl-tmp/models/diffusion_models/
 
   # vae
   - type: codewithgpu
