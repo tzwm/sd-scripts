@@ -1,0 +1,26 @@
+configs:
+  name: nunchaku_flux
+  tmp_path: /root/autodl-tmp
+  skip_mark_path: /root/autodl-tmp/skip_init_files_nunchaku_flux
+
+files:
+  - type: codewithgpu
+    cg_path: tzwm_nunchaku/svdq-fp4_r32-flux.1-kontext-dev.safetensors
+    target: /root/autodl-tmp/models/diffusion_models/
+  # vae
+  - type: codewithgpu
+    cg_path: StableDiffusion-VAE/ae.safetensors
+    target: /root/autodl-tmp/models/vae/
+
+  # clip
+  - type: codewithgpu
+    cg_path: stable-diffusion-3-medium/t5xxl_fp8_e4m3fn.safetensors
+    target: /root/autodl-tmp/models/clip/
+  - type: codewithgpu
+    cg_path: stable-diffusion-3-medium/clip_l.safetensors
+    target: /root/autodl-tmp/models/clip/
+
+  # lora
+  - type: codewithgpu
+    cg_path: tzwm_nunchaku/flux.1-turbo-alpha.safetensors
+    target: /root/autodl-tmp/models/loras/
