@@ -8,6 +8,10 @@ files:
     cg_path: tzwm_qwen-image/svdq-int4_r128-qwen-image-lightningv1.1-8steps.safetensors
     target: /root/autodl-tmp/models/diffusion_models/
 
+  - type: codewithgpu
+    cg_path: tzwm_qwen-image/svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
+    target: /root/autodl-tmp/models/diffusion_models/
+
   # vae
   - type: codewithgpu
     cg_path: tzwm_qwen-image/qwen_image_vae.safetensors

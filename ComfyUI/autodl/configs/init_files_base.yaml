@@ -7,36 +7,45 @@ files:
   # vae
   - type: codewithgpu
     cg_path: StableDiffusion-VAE/sdxl_vae_fp16_fix.safetensors
+    autodl_path: /.autodl/6a/91/04/6a9104e0c6e4541e3afc624fedfb8ffa
     target: /root/autodl-tmp/models/vae/
 
   # upscaler
   - type: codewithgpu
     cg_path: StableDiffusion-others/RealESRGAN_x2plus.pth
+    autodl_path: /.autodl/f2/a8/17/f2a8176bb1c58ede774b27bdfebbf2c7
     target: /root/models/upscale_models/
   - type: codewithgpu
     cg_path: StableDiffusion-others/RealESRGAN_x4plus.pth
+    autodl_path: /.autodl/99/ec/36/99ec365d4afad750833258a1a24f44ca
     target: /root/models/upscale_models/
   - type: codewithgpu
     cg_path: StableDiffusion-others/RealESRGAN_x4plus_anime_6B.pth
+    autodl_path: /.autodl/d5/8c/e3/d58ce384064ec1591c2ea7b79dbf47ba
     target: /root/models/upscale_models/
 
   # clip_vision
   - type: codewithgpu
     cg_path: StableDiffusion-others/clip_h.pth
+    autodl_path: /.autodl/0a/09/00/0a0900180245762f122a681839391a9b
     target: /root/models/clip_vision/
   - type: codewithgpu
     cg_path: StableDiffusion-others/clip_g.pth
+    autodl_path: /.autodl/1e/63/6b/1e636b1b5d9f1e6c9e0bf2d8cb3cc98f
     target: /root/models/clip_vision/
 
   # BiRefNet
   - type: codewithgpu
     cg_path: BiRefNet_tzwm/General.safetensors
+    autodl_path: /.autodl/94/a3/4f/94a34f65a832635846a400c4cf41c358
     target: /root/models/BiRefNet/
 
   # tagger
   - type: codewithgpu
     cg_path: StableDiffusion-others/wd-eva02-large-tagger-v3.csv
+    autodl_path: /.autodl/55/c1/1e/55c11e40f95e63ea9ac21a065a73fd0f
     target: /root/models/wd14_tagger/
   - type: codewithgpu
     cg_path: StableDiffusion-others/wd-eva02-large-tagger-v3.onnx
+    autodl_path: /.autodl/fa/41/8d/fa418dfbdbc495062a5df911cf5aa6b8
     target: /root/models/wd14_tagger/
