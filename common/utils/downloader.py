@@ -3,7 +3,7 @@ import subprocess
 import sys
 import yaml
 
-def cg_down(cg_path: str, target: str, tmp_path: str):
+def cg_down(cg_path: str, target: str, tmp_path: str, autodl_path: str | None):
     filename = os.path.basename(cg_path)
     target_file = target + filename
 
@@ -11,6 +11,11 @@ def cg_down(cg_path: str, target: str, tmp_path: str):
         return
 
     os.makedirs(target, exist_ok=True)
+
+    # If autodl_path is provided and the file exists, create a symlink instead of downloading
+    if autodl_path is not None and os.path.exists(autodl_path):
+        os.symlink(autodl_path, target_file)
+        return
 
     subprocess.run(f"cg down {cg_path} -t {tmp_path}", shell=True)
 
@@ -48,7 +53,7 @@ def prepare_init_files(filelist_path: str):
     tmp_path = data['configs']['tmp_path']
     for c in data['files']:
         if c['type'] == 'codewithgpu':
-            cg_down(c['cg_path'], c['target'], tmp_path)
+            cg_down(c['cg_path'], c['target'], tmp_path, c.get('autodl_path'))
             continue
 
         if c['type'] == 'rsync':
