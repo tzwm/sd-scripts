@@ -1,4 +1,11 @@
-- 20250830 v6.5 (v18)
+- 20251005 v6.6 (v20 & v21)
+  - 更新本体和插件，支持 qwen-image-edit-2509、wan2.5
+  - blackwell 镜像新增 SageAttention 2.2.0，non-blackwell SageAttention 2.1.0 => 2.2.0
+  - 支持 codewithgpu 应用部署
+  - 新增 rgthree-comfy 插件
+  - 初始模型删除 kontext，新增 nunchaku qwen-image-edit-2509
+  - 新增 wan 2.2 配置，使用 Rapid AllInOne model
+- 20250830 v6.5 (v18 & v19)
   - 更新本体和插件，支持 qwen-image、wan2.2
   - 新增 init_files_nunchaku_qwen_image 初始化配置
   - 删除 In-Context-Lora-Utils、segment anything、AdvancedLivePortrait、Neural Network Latent Upscale 插件
