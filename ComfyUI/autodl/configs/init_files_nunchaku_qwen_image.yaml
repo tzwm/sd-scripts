@@ -6,18 +6,22 @@ configs:
 files:
   - type: codewithgpu
     cg_path: tzwm_qwen-image/svdq-int4_r128-qwen-image-lightningv1.1-8steps.safetensors
+    autodl_path: /.autodl/0f/75/6c/0f756cdd285dd8443ff3773dbe2020da
     target: /root/autodl-tmp/models/diffusion_models/
 
   - type: codewithgpu
     cg_path: tzwm_qwen-image/svdq-int4_r128-qwen-image-edit-2509-lightningv2.0-4steps.safetensors
+    autodl_path: /.autodl/4b/a9/4c/4ba94c933a9a9fd299930c62702ffbb2
     target: /root/autodl-tmp/models/diffusion_models/
 
   # vae
   - type: codewithgpu
     cg_path: tzwm_qwen-image/qwen_image_vae.safetensors
+    autodl_path: /.autodl/5f/09/a1/5f09a128b4c05c9998b9f218dc137b7b
     target: /root/autodl-tmp/models/vae/
 
   # clip
   - type: codewithgpu
     cg_path: tzwm_qwen-image/qwen_2.5_vl_7b_fp8_scaled.safetensors
+    autodl_path: /.autodl/b8/98/22/b89822a44279e6d83c06a5061d7b1ca6
     target: /root/autodl-tmp/models/clip/
