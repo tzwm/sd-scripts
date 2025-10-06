@@ -3,6 +3,20 @@ import subprocess
 import sys
 import yaml
 
+try:
+    import torch
+except Exception:
+    pass
+
+def check_blackwell():
+    try:
+        device_properties = torch.cuda.get_device_properties(0)
+        return device_properties.major == 12
+    except Exception as e:
+        return False
+
+IS_BLACKWELL = check_blackwell()
+
 def cg_down(cg_path: str, target: str, tmp_path: str, autodl_path: str | None):
     filename = os.path.basename(cg_path)
     target_file = target + filename
@@ -52,6 +66,12 @@ def prepare_init_files(filelist_path: str):
 
     tmp_path = data['configs']['tmp_path']
     for c in data['files']:
+        if c.get('blackwell') and IS_BLACKWELL:
+            cc = c.get('blackwell')
+            cc['type'] = c['type']
+            cc['target'] = c['target']
+            c = cc
+
         if c['type'] == 'codewithgpu':
             cg_down(c['cg_path'], c['target'], tmp_path, c.get('autodl_path'))
             continue
