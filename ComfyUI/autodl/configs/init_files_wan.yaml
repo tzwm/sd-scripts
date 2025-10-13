@@ -4,7 +4,36 @@ configs:
   skip_mark_path: /root/autodl-tmp/skip_init_files_wan
 
 files:
+  # unet
   - type: codewithgpu
-    cg_path: Kijai_WanVideo_comfy/wan2.2-rapid-mega-aio-v5.safetensors
-    autodl_path: /.autodl/4c/49/96/4c499645125ca790c4c3830825d0fcbb
-    target: /root/autodl-tmp/models/checkpoint/
+    cg_path: Kijai_WanVideo_comfy/Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+    target: /root/autodl-tmp/models/diffusion_models/
+  - type: codewithgpu
+    cg_path: Kijai_WanVideo_comfy/Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+    target: /root/autodl-tmp/models/diffusion_models/
+
+  # AniSora for anime
+  # - type: codewithgpu
+  #   cg_path: Kijai_WanVideo_comfy/Wan2_2-I2V_AniSoraV3_2_HIGH_14B_fp8_e4m3fn_scaled_KJ.safetensors
+  #   target: /root/autodl-tmp/models/diffusion_models/
+  # - type: codewithgpu
+  #   cg_path: Kijai_WanVideo_comfy/Wan2_2-I2V_AniSoraV3_2_LOW_14B_fp8_e4m3fn_scaled_KJ.safetensors
+  #   target: /root/autodl-tmp/models/diffusion_models/
+
+  # lora
+  - type: codewithgpu
+    cg_path: Kijai_WanVideo_comfy/Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16.safetensors
+    target: /root/autodl-tmp/models/loras/
+  - type: codewithgpu
+    cg_path: Kijai_WanVideo_comfy/Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16.safetensors
+    target: /root/autodl-tmp/models/loras/
+
+  # vae
+  - type: codewithgpu
+    cg_path: Kijai_WanVideo_comfy/Wan2_1_VAE_bf16.safetensors
+    target: /root/autodl-tmp/models/vae/
+
+  # clip
+  - type: codewithgpu
+    cg_path: Kijai_WanVideo_comfy/umt5-xxl-enc-bf16.safetensors
+    target: /root/autodl-tmp/models/clip/
