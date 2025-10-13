@@ -14,7 +14,7 @@ $sudo_prefix apt-get install -y \
 
 pip install --upgrade pip
 
-pip install pickleshare codewithgpu jupyterlab-language-pack-zh-CN huggingface_hub
+pip install uv pickleshare codewithgpu jupyterlab-language-pack-zh-CN huggingface_hub
 
 # curl -fsSL https://ollama.com/install.sh | sh
 
