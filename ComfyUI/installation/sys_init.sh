@@ -10,7 +10,7 @@ $sudo_prefix apt-get install -y \
   libtalloc-dev gcc g++ make cmake \
   iputils-ping tmux tree git wget \
   aria2 ffmpeg unzip vim htop \
-  fonts-noto-cjk imagemagick
+  fonts-noto-cjk imagemagick exiftool
 
 pip install --upgrade pip
 
