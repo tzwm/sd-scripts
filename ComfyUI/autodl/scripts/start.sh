@@ -2,8 +2,8 @@
 
 echo "启动中……"
 
-echo "ollama 启动"
-ollama serve &
+# echo "ollama 启动"
+# ollama serve &
 
 cd /root/autodl-tmp/ComfyUI
 
