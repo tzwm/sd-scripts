@@ -39,13 +39,3 @@ files:
     cg_path: BiRefNet_tzwm/General.safetensors
     autodl_path: /.autodl/94/a3/4f/94a34f65a832635846a400c4cf41c358
     target: /root/models/BiRefNet/
-
-  # tagger
-  - type: codewithgpu
-    cg_path: StableDiffusion-others/wd-eva02-large-tagger-v3.csv
-    autodl_path: /.autodl/55/c1/1e/55c11e40f95e63ea9ac21a065a73fd0f
-    target: /root/models/wd14_tagger/
-  - type: codewithgpu
-    cg_path: StableDiffusion-others/wd-eva02-large-tagger-v3.onnx
-    autodl_path: /.autodl/fa/41/8d/fa418dfbdbc495062a5df911cf5aa6b8
-    target: /root/models/wd14_tagger/
