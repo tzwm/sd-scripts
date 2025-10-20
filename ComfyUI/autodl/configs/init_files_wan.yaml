@@ -7,9 +7,11 @@ files:
   # unet
   - type: codewithgpu
     cg_path: Kijai_WanVideo_comfy/Wan2_2-I2V-A14B-HIGH_fp8_e4m3fn_scaled_KJ.safetensors
+    autodl_path: /.autodl/a4/02/96/a40296d8642f78470df656478fbc61ed
     target: /root/autodl-tmp/models/diffusion_models/
   - type: codewithgpu
     cg_path: Kijai_WanVideo_comfy/Wan2_2-I2V-A14B-LOW_fp8_e4m3fn_scaled_KJ.safetensors
+    autodl_path: /.autodl/4e/0c/91/4e0c91fc11ba0f106e054adfd5fa0cca
     target: /root/autodl-tmp/models/diffusion_models/
 
   # AniSora for anime
@@ -23,17 +25,21 @@ files:
   # lora
   - type: codewithgpu
     cg_path: Kijai_WanVideo_comfy/Wan22_A14B_T2V_HIGH_Lightning_4steps_lora_250928_rank128_fp16.safetensors
+    autodl_path: /.autodl/01/f5/cc/01f5cc3ec846862f11dfd2f7dafe880a
     target: /root/autodl-tmp/models/loras/
   - type: codewithgpu
     cg_path: Kijai_WanVideo_comfy/Wan22_A14B_T2V_LOW_Lightning_4steps_lora_250928_rank64_fp16.safetensors
+    autodl_path: /.autodl/b5/5e/74/b55e745550cd7eccedbcc6f37d9b582d
     target: /root/autodl-tmp/models/loras/
 
   # vae
   - type: codewithgpu
     cg_path: Kijai_WanVideo_comfy/Wan2_1_VAE_bf16.safetensors
+    autodl_path: /.autodl/6f/69/56/6f6956f1a44321b1c322783a04b52dce
     target: /root/autodl-tmp/models/vae/
 
   # clip
   - type: codewithgpu
     cg_path: Kijai_WanVideo_comfy/umt5-xxl-enc-bf16.safetensors
+    autodl_path: /.autodl/9b/55/23/9b55237adc09d97ec211f02aab2abcae
     target: /root/autodl-tmp/models/clip/
