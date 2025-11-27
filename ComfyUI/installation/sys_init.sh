@@ -16,6 +16,8 @@ pip install --upgrade pip
 
 pip install uv pickleshare codewithgpu jupyterlab-language-pack-zh-CN huggingface_hub
 
+pip install flash-attn --no-build-isolation
+
 # curl -fsSL https://ollama.com/install.sh | sh
 
 # 安装google-chrome
