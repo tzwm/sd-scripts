@@ -25,15 +25,15 @@ files:
     target: /root/models/upscale_models/
 
   # clip_vision
-  - type: codewithgpu
-    cg_path: StableDiffusion-others/clip_h.pth
-    autodl_path: /.autodl/0a/09/00/0a0900180245762f122a681839391a9b
-    target: /root/models/clip_vision/
-  - type: codewithgpu
-    cg_path: StableDiffusion-others/clip_g.pth
-    autodl_path: /.autodl/1e/63/6b/1e636b1b5d9f1e6c9e0bf2d8cb3cc98f
-    target: /root/models/clip_vision/
-
+  # - type: codewithgpu
+  #   cg_path: StableDiffusion-others/clip_h.pth
+  #   autodl_path: /.autodl/0a/09/00/0a0900180245762f122a681839391a9b
+  #   target: /root/models/clip_vision/
+  # - type: codewithgpu
+  #   cg_path: StableDiffusion-others/clip_g.pth
+  #   autodl_path: /.autodl/1e/63/6b/1e636b1b5d9f1e6c9e0bf2d8cb3cc98f
+  #   target: /root/models/clip_vision/
+  #
   # BiRefNet
   - type: codewithgpu
     cg_path: BiRefNet_tzwm/General.safetensors

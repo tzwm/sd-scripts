@@ -1,3 +1,14 @@
+- 20251130 v7.0 (v22 & v23)
+  - 重新制作 non-blackwell 镜像，极大降低镜像系统盘体积，使用 PyTorch 2.5.1, Python 3.12(ubuntu22.04), Cuda 12.4
+  - 更新本体和插件，支持 z-image
+  - 新增 flash-attn-2.8.3 依赖
+  - 预置 z-image-turbo 模型
+  - 更新 qwen-image-edit 模型为 svdq_r128-qwen-image-edit-2509-lightning-4steps-251115
+  - 重新配置 wan 2.2 初始化模型，使用 Kijai 模型系列替换之前的 AllInOne 模型
+  - 删除 AdvancedLivePortrait、WD14-Tagger（告别 danbooru）、NNLatentUpscale、In-Context-Lora-Utils
+  - 新增 [SuperSave](https://github.com/talesofai/comfyui-supersave)、[Upscaler-Tensorrt](https://github.com/yuvraj108c/ComfyUI-Upscaler-Tensorrt)
+  - 预置 build 后的 RealESRGAN_x4plus tensorrt
+  - 预置一些工作流方便上手和测试
 - 20251005 v6.6 (v20 & v21)
   - 更新本体和插件，支持 qwen-image-edit-2509、wan2.5
   - blackwell 镜像新增 SageAttention 2.2.0，non-blackwell SageAttention 2.1.0 => 2.2.0
