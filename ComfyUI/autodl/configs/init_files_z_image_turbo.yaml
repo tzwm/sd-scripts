@@ -1,0 +1,18 @@
+configs:
+  name: base
+  tmp_path: /root/autodl-tmp
+  skip_mark_path: /root/autodl-tmp/skip_init_files_z_image_turbo
+
+files:
+  - type: codewithgpu
+    cg_path: StableDiffusion-VAE/ae.safetensors
+    autodl_path: /.autodl/Comfy-Org/z_image_turbo/split_files/vae/ae.safetensors
+    target: /root/autodl-tmp/models/vae/
+  - type: codewithgpu
+    cg_path: z_image_turbo/qwen_3_4b.safetensors
+    autodl_path: /.autodl/Comfy-Org/z_image_turbo/split_files/text_encoders/qwen_3_4b.safetensors
+    target: /root/autodl-tmp/models/text_encoders/
+  - type: codewithgpu
+    cg_path: z_image_turbo/z_image_turbo_bf16.safetensors
+    autodl_path: /.autodl/Comfy-Org/z_image_turbo/split_files/diffusion_models/z_image_turbo_bf16.safetensors
+    target: /root/autodl-tmp/models/diffusion_models/
