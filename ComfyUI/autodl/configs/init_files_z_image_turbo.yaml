@@ -13,6 +13,10 @@ files:
     autodl_path: /.autodl/Comfy-Org/z_image_turbo/split_files/text_encoders/qwen_3_4b.safetensors
     target: /root/autodl-tmp/models/text_encoders/
   - type: codewithgpu
-    cg_path: z_image_turbo/z_image_turbo_bf16.safetensors
-    autodl_path: /.autodl/Comfy-Org/z_image_turbo/split_files/diffusion_models/z_image_turbo_bf16.safetensors
+    cg_path: Z-Image_comfy_fp8_scaled/z-image-turbo_fp8_scaled_e4m3fn_KJ.safetensors
+    autodl_path: /.autodl/89/2b/40/892b40f243d1d255f25b6d1bf6fa0146
     target: /root/autodl-tmp/models/diffusion_models/
+  # - type: codewithgpu
+  #   cg_path: z_image_turbo/z_image_turbo_bf16.safetensors
+  #   autodl_path: /.autodl/Comfy-Org/z_image_turbo/split_files/diffusion_models/z_image_turbo_bf16.safetensors
+  #   target: /root/autodl-tmp/models/diffusion_models/
