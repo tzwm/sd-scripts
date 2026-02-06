@@ -1,0 +1,22 @@
+configs:
+  name: base
+  tmp_path: /root/autodl-tmp
+  skip_mark_path: /root/autodl-tmp/skip_init_files_ace_step_15
+
+files:
+  - type: codewithgpu
+    cg_path: ace_step_1.5_ComfyUI_files/acestep_v1.5_turbo.safetensors
+    autodl_path: /.autodl/53/d0/2d/53d02d82081967e1c25da068e7981b00
+    target: /root/autodl-tmp/models/diffusion_models/
+  - type: codewithgpu
+    cg_path: ace_step_1.5_ComfyUI_files/qwen_0.6b_ace15.safetensors
+    autodl_path: /.autodl/ca/31/61/ca3161b6e6284c1fd1aa74faa2ce7440
+    target: /root/autodl-tmp/models/text_encoders/
+  - type: codewithgpu
+    cg_path: ace_step_1.5_ComfyUI_files/qwen_1.7b_ace15.safetensors
+    autodl_path: /.autodl/3f/35/e2/3f35e271aba7e6a07006d3867f70a472
+    target: /root/autodl-tmp/models/text_encoders/
+  - type: codewithgpu
+    cg_path: ace_step_1.5_ComfyUI_files/ace_1.5_vae.safetensors
+    autodl_path: /.autodl/9f/ff/36/9fff3629e9e2aee29470b86f2a78e78d
+    target: /root/autodl-tmp/models/vae/
