@@ -1,0 +1,20 @@
+configs:
+  name: krea_2
+  tmp_path: /root/autodl-tmp
+  skip_mark_path: /root/autodl-tmp/skip_init_files_krea_2
+
+files:
+  # unet
+  - type: codewithgpu
+    cg_path: comfy_org_krea_2/krea2_turbo_fp8_scaled.safetensors
+    target: /root/autodl-tmp/models/diffusion_models/
+
+  # vae
+  - type: codewithgpu
+    cg_path: comfy_org_krea_2/qwen_image_vae.safetensors
+    target: /root/autodl-tmp/models/vae/
+
+  # text encoder
+  - type: codewithgpu
+    cg_path: comfy_org_krea_2/qwen3vl_4b_fp8_scaled.safetensors
+    target: /root/autodl-tmp/models/text_encoders/
